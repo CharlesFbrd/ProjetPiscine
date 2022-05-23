@@ -12,7 +12,7 @@
         <div id="wrapper">
             <div id="header">
                 <div id="logo_compte">
-                    <img src="boutonMonCompte.png" alt="logoCompte" width="150" height="50"></img>
+                    <a href="Connexion.php"><img src="boutonMonCompte.png" alt="logoCompte" width="150" height="50"></img></a>
                 </div>
             </div>
             <div id="navigation">
