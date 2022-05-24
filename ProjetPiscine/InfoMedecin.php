@@ -7,6 +7,7 @@
         <title>Info Médecin</title>
         <meta charset="utf-8">
         <link href="style.css" rel="stylesheet" type="text/css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     </head>
     <body>
 
@@ -52,19 +53,36 @@
             </div>
 
             <div id="section">
-                <!-- <div id="tableau">
-                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+                <div id="photo_medecin">
                     <script type="text/javascript">
-                    var Nom=
-                    var Prenom=
-                    var Medecins='<form action="InfoMedecin.php" method="post"><table><tr><td><h2>Médecins Généralistes:</h2></td></tr>';
-                    for(var i=0; i<Nom.length; i++){
-                        Medecins += '<tr><td><button id="btn_Nom_Medecin" name="btn_Nom_Medecin" style="width:100%" value="'+Nom[i]+'">'+Nom[i]+" "+Prenom[i]+'</button></td></tr>';
-                    }
-                    Medecins +='</table></form>';
-                    $("#tableau").append(Medecins);
+                    var Photo=<?php echo json_encode($Photo)?>;
+                    var PhotoMedecin ='<img src="'+Photo+'" width="300px" height="300"></img>';
+                    $("#photo_medecin").append(PhotoMedecin);
                     </script>
-                </div> -->
+                </div>
+                <div id="infos_medecin">
+                    <script type="text/javascript">
+                    var Nom=<?php echo json_encode($Nom)?>;
+                    var Prenom=<?php echo json_encode($Prenom)?>;
+                    var Specialite=<?php echo json_encode($Specialite)?>;
+                    var Bureau=<?php echo json_encode($Bureau)?>;
+                    var Telephone=<?php echo json_encode($Telephone)?>;
+                    var Email=<?php echo json_encode($Email)?>;
+                    var InfosMedecin='<h2>Dr.'+Prenom+' '+Nom+'</h2>';
+                    InfosMedecin+='<h3>Médecin: '+Specialite+'</h3>';
+                    InfosMedecin+='<h3>Bureau: '+Bureau+'</h3>';
+                    InfosMedecin+='<h3>Téléphone: +33 '+Telephone+'</h3>';
+                    InfosMedecin+='<h3>Email: '+Email+'</h3>';
+                    $("#infos_medecin").append(InfosMedecin);
+                    </script>
+                </div>
+                <div id="planning_medecin">
+                    <script type="text/javascript">
+                    var Planning=<?php echo json_encode($Planning)?>;
+                    var PlanningMedecin='<img src="'+Planning+'" width="800px" height="60"></img>';
+                    $("#planning_medecin").append(PlanningMedecin);
+                    </script>
+                </div>
             </div>
 
             <div id="footer">

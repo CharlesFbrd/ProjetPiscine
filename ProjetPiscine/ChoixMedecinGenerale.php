@@ -7,6 +7,7 @@
         <title>Choix Médecin</title>
         <meta charset="utf-8">
         <link href="style.css" rel="stylesheet" type="text/css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     </head>
     <body>
 
@@ -48,7 +49,6 @@
 
             <div id="section">
                 <div id="tableau">
-                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
                     <script type="text/javascript">
                     var Nom=<?php echo json_encode($Nom)?>;
                     var Prenom=<?php echo json_encode($Prenom)?>;

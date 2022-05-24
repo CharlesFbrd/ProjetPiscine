@@ -105,6 +105,50 @@ h2{
 #btn_Nom_Medecin{
     background-color : #2d81e1c1;
 }
+#photo_medecin{
+    float: left;
+    width: 27%;
+    margin-left: 150px;
+    margin-top: 25px;
+
+}
+#infos_medecin{
+    float: left;
+    width: 55%;
+    margin-left: 15px;
+    margin-top: 25px;  
+}
+#planning_medecin{
+    float: left;
+    margin-left: 80px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+#tableau_Addictologue{
+    float: left;
+    margin-top: 25px;
+    margin-left: 25px;
+}
+#tableau_Andrologue{
+    float: left;
+    margin-top: 25px;
+    margin-left: 25px;
+}
+#tableau_Cardiologue{
+    float: left;
+    margin-top: 25px;
+    margin-left: 25px;
+}
+#tableau_Dermatologue{
+    float: left;
+    margin-top: 25px;
+    margin-left: 25px;
+}
+#tableau_GastroHepatoEnterologue{
+    float: left;
+    margin-top: 25px;
+    margin-left: 25px;
+}
 
 
 /* /////////////////////////// */
