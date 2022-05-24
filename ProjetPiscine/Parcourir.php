@@ -23,13 +23,13 @@
             </div>
             <div id="section">
                 <div id="btn_generale">
-
+                    <a href="ChoixMedecinGenerale.php"><img src="boutonMedecineGenerale.png" alt="boutonMG" width="300" height="100"></img></a>
                 </div>
                 <div id="btn_specialistes">
-                    
+                    <a href="ChoixMedecinsSpecialistes.php"><img src="boutonMedecinsSpecialistes.png" alt="boutonMS" width="300" height="100"></img></a>
                 </div>
                 <div id="btn_labo">
-                    
+                <a href="ChoixLaboratoire.php"><img src="boutonLaboratoire.png" alt="boutonLabo" width="300" height="100"></img></a>
                 </div>
             </div>
             <div id="footer">
