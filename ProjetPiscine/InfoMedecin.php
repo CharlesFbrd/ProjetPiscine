@@ -4,15 +4,15 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Choix Médecin</title>
+        <title>Info Médecin</title>
         <meta charset="utf-8">
         <link href="style.css" rel="stylesheet" type="text/css" />
     </head>
     <body>
 
         <?php 
-            $Nom = array();
-            $Prenom = array();
+            $Nom = $_POST["btn_Nom_Medecin"];
+            $_SESSION["NomMedecin"] = $Nom;
             $db = "projetpiscine";
             $site = "localhost:3308";
             $db_id="root";
@@ -21,11 +21,16 @@
             $db_handle = mysqli_connect($site, $db_id, $db_mdp);
             $db_found = mysqli_select_db($db_handle, $db);
             if($db_found){
-                $sql = "SELECT Nom,Prenom FROM medecin WHERE Specialite='Generaliste'";
+                $sql = "SELECT Prenom,Specialite,Bureau,Telephone,Email,Planning,Photo FROM medecin WHERE Nom='$Nom'";
                 $res = mysqli_query($db_handle,$sql);
                 while($data = mysqli_fetch_assoc($res)){
-                    $Nom[]=$data["Nom"];
-                    $Prenom[]=$data["Prenom"];
+                    $Prenom=$data["Prenom"];
+                    $Specialite=$data["Specialite"];
+                    $Bureau=$data["Bureau"];
+                    $Telephone=$data["Telephone"];
+                    $Email=$data["Email"];
+                    $Planning=$data["Planning"];
+                    $Photo=$data["Photo"];
                 };
             }else{
                 echo "Unable to connect <br>";
@@ -47,11 +52,11 @@
             </div>
 
             <div id="section">
-                <div id="tableau">
+                <!-- <div id="tableau">
                     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
                     <script type="text/javascript">
-                    var Nom=<?php echo json_encode($Nom)?>;
-                    var Prenom=<?php echo json_encode($Prenom)?>;
+                    var Nom=
+                    var Prenom=
                     var Medecins='<form action="InfoMedecin.php" method="post"><table><tr><td><h2>Médecins Généralistes:</h2></td></tr>';
                     for(var i=0; i<Nom.length; i++){
                         Medecins += '<tr><td><button id="btn_Nom_Medecin" name="btn_Nom_Medecin" style="width:100%" value="'+Nom[i]+'">'+Nom[i]+" "+Prenom[i]+'</button></td></tr>';
@@ -59,7 +64,7 @@
                     Medecins +='</table></form>';
                     $("#tableau").append(Medecins);
                     </script>
-                </div>
+                </div> -->
             </div>
 
             <div id="footer">
