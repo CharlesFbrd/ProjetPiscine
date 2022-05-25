@@ -105,6 +105,9 @@ h2{
 #btn_Nom_Medecin{
     background-color : #2d81e1c1;
 }
+
+
+
 #photo_medecin{
     float: left;
     width: 27%;
@@ -122,33 +125,99 @@ h2{
     float: left;
     margin-left: 80px;
     margin-top: 30px;
+}
+#priseDeRdv{
+    float: left;
+    margin-left: 150px;
+    margin-top: 20px;
     margin-bottom: 30px;
 }
-#tableau_Addictologue{
+#CommuniquerAvecMedecin{
     float: left;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+#VoirCV{
+    float: left;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+
+
+#tableau_addictologue{
+    float: left;
+    width:  15%;
+    margin-left: 160px;
+    margin-top: 25px;
+}
+#tableau_andrologue{
+    float: left;
+    width:  15%;
     margin-top: 25px;
     margin-left: 25px;
 }
-#tableau_Andrologue{
+#tableau_cardiologue{
     float: left;
+    width:  15%;
     margin-top: 25px;
     margin-left: 25px;
 }
-#tableau_Cardiologue{
+#tableau_dermatologue{
     float: left;
+    width:  15%;
     margin-top: 25px;
     margin-left: 25px;
 }
-#tableau_Dermatologue{
+#tableau_gastroHepatoEnterologue{
     float: left;
+    width:  27%;
     margin-top: 25px;
     margin-left: 25px;
+    margin-bottom: 25px;
 }
-#tableau_GastroHepatoEnterologue{
+#tableau_gynecologue{
     float: left;
+    width:  15%;
     margin-top: 25px;
     margin-left: 25px;
+    margin-bottom: 25px;
 }
+#tableau_IST{
+    float: left;
+    width:  15%;
+    margin-top: 25px;
+    margin-left: 25px;
+    margin-bottom: 25px;
+}
+#tableau_osteopathe{
+    float: left;
+    width:  15%;
+    margin-top: 25px;
+    margin-left: 25px;
+    margin-bottom: 25px;
+}
+
+#planning{
+    float: left;
+    width: 80%;
+    margin-top: 25px;
+    margin-left: 50px;
+    margin-bottom: 25px;
+}
+
+.infoMedecinPlanning{
+    background-color: rgb(253,253,150);
+}
+.LibelleInfoPlanning{
+    background-color: rgb(119,181,254);
+}
+.JourPlanning{
+    background-color: rgb(176,242,182); 
+}
+
 
 
 /* /////////////////////////// */

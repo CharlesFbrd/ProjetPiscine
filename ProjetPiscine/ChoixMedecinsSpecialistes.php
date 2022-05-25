@@ -114,7 +114,7 @@
 
             <div id="section">
                 <!-- Addictologie -->
-                <div id="tableau_Addictologue">
+                <div id="tableau_addictologue">
                     <script type="text/javascript">
                     var NomAddictologue=<?php echo json_encode($NomAddictologue)?>;
                     var PrenomAddictologue=<?php echo json_encode($PrenomAddictologue)?>;
@@ -123,12 +123,12 @@
                         Addictologues += '<tr><td><button id="btn_Nom_Medecin" name="btn_Nom_Medecin" style="width:100%" value="'+NomAddictologue[i]+'">'+NomAddictologue[i]+' '+PrenomAddictologue[i]+'</button></td></tr>';
                     }
                     Addictologues +='</table></form>';
-                    $("#tableau_Addictologue").append(Addictologues);
+                    $("#tableau_addictologue").append(Addictologues);
                     </script>
                 </div>
-
+                
                 <!-- Andrologie -->
-                <div id="tableau_Andrologue">
+                <div id="tableau_andrologue">
                     <script type="text/javascript">
                     var NomAndrologue=<?php echo json_encode($NomAndrologue)?>;
                     var PrenomAndrologue=<?php echo json_encode($PrenomAndrologue)?>;
@@ -137,12 +137,12 @@
                         Andrologues += '<tr><td><button id="btn_Nom_Medecin" name="btn_Nom_Medecin" style="width:100%" value="'+NomAndrologue[i]+'">'+NomAndrologue[i]+' '+PrenomAndrologue[i]+'</button></td></tr>';
                     }
                     Andrologues +='</table></form>';
-                    $("#tableau_Andrologue").append(Andrologues);
+                    $("#tableau_andrologue").append(Andrologues);
                     </script>
                 </div>
 
                 <!-- Cardiologie -->
-                <div id="tableau_Cardiologue">
+                <div id="tableau_cardiologue">
                     <script type="text/javascript">
                     var NomCardiologue=<?php echo json_encode($NomCardiologue)?>;
                     var PrenomCardiologue=<?php echo json_encode($PrenomCardiologue)?>;
@@ -151,12 +151,12 @@
                         Cardiologues += '<tr><td><button id="btn_Nom_Medecin" name="btn_Nom_Medecin" style="width:100%" value="'+NomCardiologue[i]+'">'+NomCardiologue[i]+' '+PrenomCardiologue[i]+'</button></td></tr>';
                     }
                     Cardiologues +='</table></form>';
-                    $("#tableau_Cardiologue").append(Cardiologues);
+                    $("#tableau_cardiologue").append(Cardiologues);
                     </script>
                 </div>
 
                 <!-- Dermatologie -->
-                <div id="tableau_Dermatologue">
+                <div id="tableau_dermatologue">
                     <script type="text/javascript">
                     var NomDermatologue=<?php echo json_encode($NomDermatologue)?>;
                     var PrenomDermatologue=<?php echo json_encode($PrenomDermatologue)?>;
@@ -165,12 +165,12 @@
                         Dermatologues += '<tr><td><button id="btn_Nom_Medecin" name="btn_Nom_Medecin" style="width:100%" value="'+NomDermatologue[i]+'">'+NomDermatologue[i]+' '+PrenomDermatologue[i]+'</button></td></tr>';
                     }
                     Dermatologues +='</table></form>';
-                    $("#tableau_Dermatologue").append(Dermatologues);
+                    $("#tableau_dermatologue").append(Dermatologues);
                     </script>
                 </div>
 
                 <!-- GastroHepatoEnterologie -->
-                <div id="tableau_GastroHepatoEnterologue">
+                <div id="tableau_gastroHepatoEnterologue">
                     <script type="text/javascript">
                     var NomGastroHepatoEnterologue=<?php echo json_encode($NomGastroHepatoEnterologue)?>;
                     var PrenomGastroHepatoEnterologue=<?php echo json_encode($PrenomGastroHepatoEnterologue)?>;
@@ -179,9 +179,52 @@
                         GastroHepatoEnterologues += '<tr><td><button id="btn_Nom_Medecin" name="btn_Nom_Medecin" style="width:100%" value="'+NomGastroHepatoEnterologue[i]+'">'+NomGastroHepatoEnterologue[i]+' '+PrenomGastroHepatoEnterologue[i]+'</button></td></tr>';
                     }
                     GastroHepatoEnterologues +='</table></form>';
-                    $("#tableau_GastroHepatoEnterologue").append(GastroHepatoEnterologues);
+                    $("#tableau_gastroHepatoEnterologue").append(GastroHepatoEnterologues);
                     </script>
                 </div>
+
+                <!-- Gynecologie -->
+                <div id="tableau_gynecologue">
+                    <script type="text/javascript">
+                    var NomGynecologue=<?php echo json_encode($NomGynecologue)?>;
+                    var PrenomGynecologue=<?php echo json_encode($PrenomGynecologue)?>;
+                    var Gynecologues='<form action="InfoMedecin.php" method="post"><table><tr><td><h2>Gynecologues:</h2></td></tr>';
+                    for(var i=0; i<NomGynecologue.length; i++){
+                        Gynecologues += '<tr><td><button id="btn_Nom_Medecin" name="btn_Nom_Medecin" style="width:100%" value="'+NomGynecologue[i]+'">'+NomGynecologue[i]+' '+PrenomGynecologue[i]+'</button></td></tr>';
+                    }
+                    Gynecologues +='</table></form>';
+                    $("#tableau_gynecologue").append(Gynecologues);
+                    </script>
+                </div>
+
+                <!-- IST -->
+                <div id="tableau_IST">
+                    <script type="text/javascript">
+                    var NomIST=<?php echo json_encode($NomIST)?>;
+                    var PrenomIST=<?php echo json_encode($PrenomIST)?>;
+                    var IST='<form action="InfoMedecin.php" method="post"><table><tr><td><h2>IST:</h2></td></tr>';
+                    for(var i=0; i<NomIST.length; i++){
+                        IST += '<tr><td><button id="btn_Nom_Medecin" name="btn_Nom_Medecin" style="width:100%" value="'+NomIST[i]+'">'+NomIST[i]+' '+PrenomIST[i]+'</button></td></tr>';
+                    }
+                    IST +='</table></form>';
+                    $("#tableau_IST").append(IST);
+                    </script>
+                </div>
+
+                <!-- Osteopathie -->
+                <div id="tableau_osteopathe">
+                    <script type="text/javascript">
+                    var NomOsteopathe=<?php echo json_encode($NomOsteopathe)?>;
+                    var PrenomOsteopathe=<?php echo json_encode($PrenomOsteopathe)?>;
+                    var Osteopathes='<form action="InfoMedecin.php" method="post"><table><tr><td><h2>Osteopathe:</h2></td></tr>';
+                    for(var i=0; i<NomOsteopathe.length; i++){
+                        Osteopathes += '<tr><td><button id="btn_Nom_Medecin" name="btn_Nom_Medecin" style="width:100%" value="'+NomOsteopathe[i]+'">'+NomOsteopathe[i]+' '+PrenomOsteopathe[i]+'</button></td></tr>';
+                    }
+                    Osteopathes +='</table></form>';
+                    $("#tableau_osteopathe").append(Osteopathes);
+                    </script>
+                </div>
+                
             </div>
 
             <div id="footer">
