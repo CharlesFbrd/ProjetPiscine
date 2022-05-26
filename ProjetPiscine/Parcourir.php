@@ -29,7 +29,7 @@
                     <a href="ChoixMedecinsSpecialistes.php"><img src="boutonMedecinsSpecialistes.png" alt="boutonMS" width="300" height="100"></img></a>
                 </div>
                 <div id="btn_labo">
-                <a href="ChoixLaboratoire.php"><img src="boutonLaboratoire.png" alt="boutonLabo" width="300" height="100"></img></a>
+                <a href="InfoLabo.php"><img src="boutonLaboratoire.png" alt="boutonLabo" width="300" height="100"></img></a>
                 </div>
             </div>
             <div id="footer">

@@ -144,7 +144,18 @@ h2{
     margin-top: 20px;
     margin-bottom: 30px;
 }
-
+#priseDeRdvLabo{
+    float: left;
+    margin-left: 200px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+#NosServices{
+    float: left;
+    margin-left: 50px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
 
 
 #tableau_addictologue{
