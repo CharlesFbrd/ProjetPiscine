@@ -14,6 +14,7 @@
         <?php 
             $Nom = $_POST["btn_Nom_Medecin"];
             $_SESSION["NomMedecin"] = $Nom;
+            $planning = array();
             $db = "projetpiscine";
             $site = "localhost:3308";
             $db_id="root";
@@ -32,6 +33,12 @@
                     $Email=$data["Email"];
                     $Planning=$data["Planning"];
                     $Photo=$data["Photo"];
+                };
+
+                $sql = "SELECT Dispo FROM planning WHERE Nom='$Nom'";
+                $res = mysqli_query($db_handle,$sql);
+                while($data = mysqli_fetch_assoc($res)){
+                    $planning[] = $data["Dispo"];
                 };
             }else{
                 echo "Unable to connect <br>";
@@ -78,10 +85,58 @@
                 </div>
                 <div id="planning_medecin">
                     <script type="text/javascript">
-                    var Planning=<?php echo json_encode($Planning)?>;
-                    var PlanningMedecin='<img src="'+Planning+'" width="800px" height="60"></img>';
-                    $("#planning_medecin").append(PlanningMedecin);
+                        function Dispo(){
+                            var Dispo=<?php echo json_encode($planning)?>;
+                            for(var i=0; i<Dispo.length; i++){
+                            if(Dispo[i]==0){
+                                $("#btn"+i).css("background-color", "black");
+                                $("#btn"+i).prop("disabled",true);
+                            }
+                            }
+                        }
                     </script>
+                    <table border="1px" align="center">
+                        <tr>
+                            <td COLSPAN="3" ROWSPAN="2" align="middle" class="LibelleInfoPlanning">Spécialité</td>
+                            <td COLSPAN="3" ROWSPAN="2"align="middle" class="LibelleInfoPlanning">Médecin</td>
+                            <td COLSPAN="2" align="middle" class="JourPlanning">Lundi</td>
+                            <td COLSPAN="2" align="middle" class="JourPlanning">Mardi</td>
+                            <td COLSPAN="2" align="middle" class="JourPlanning">Mercredi</td>
+                            <td COLSPAN="2" align="middle" class="JourPlanning">Jeudi</td>
+                            <td COLSPAN="2" align="middle" class="JourPlanning">Vendredi</td>
+                            <td COLSPAN="2" align="middle" class="JourPlanning">Samedi</td>
+                        </tr>
+                        <tr>
+                            <td align="middle">AM</td>
+                            <td align="middle">PM</td>
+                            <td align="middle">AM</td>
+                            <td align="middle">PM</td>
+                            <td align="middle">AM</td>
+                            <td align="middle">PM</td>
+                            <td align="middle">AM</td>
+                            <td align="middle">PM</td>
+                            <td align="middle">AM</td>
+                            <td align="middle">PM</td>
+                            <td align="middle">AM</td>
+                            <td align="middle">PM</td>
+                        </tr>
+                        <tr>
+                            <td COLSPAN="3" ROWSPAN="1" align="middle" class="infoMedecinPlanning"><?php echo $Specialite?></td>
+                            <td COLSPAN="3" ROWSPAN="1" align="middle" class="infoMedecinPlanning"><?php echo $Nom?></td>
+                            <td id="btn0"><script type="text/javascript">Dispo();</script></td>
+                            <td id="btn1"><script type="text/javascript">Dispo();</script></td>
+                            <td id="btn2"><script type="text/javascript">Dispo();</script></td>
+                            <td id="btn3"><script type="text/javascript">Dispo();</script></td>
+                            <td id="btn4"><script type="text/javascript">Dispo();</script></td>
+                            <td id="btn5"><script type="text/javascript">Dispo();</script></td>
+                            <td id="btn6"><script type="text/javascript">Dispo();</script></td>
+                            <td id="btn7"><script type="text/javascript">Dispo();</script></td>
+                            <td id="btn8"><script type="text/javascript">Dispo();</script></td>
+                            <td id="btn9"><script type="text/javascript">Dispo();</script></td>
+                            <td id="btn10"><script type="text/javascript">Dispo();</script></td>
+                            <td id="btn11"><script type="text/javascript">Dispo();</script></td>
+                        </tr>
+                    </table>
                 </div>
                 <div id="priseDeRdv">
                     <a href="PriseDeRDV.php"><img src="btn_Rdv.png" alt="boutonRDV" width="200" height="70"></a>

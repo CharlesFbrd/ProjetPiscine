@@ -119,11 +119,11 @@ h2{
     float: left;
     width: 55%;
     margin-left: 15px;
-    margin-top: 25px;  
+    margin-top: 25px;
 }
 #planning_medecin{
     float: left;
-    margin-left: 80px;
+    width: 80%;
     margin-top: 30px;
 }
 #priseDeRdv{
@@ -247,6 +247,19 @@ input[type=submit]:hover { /* couleur quand souris sur le bouton */
     background-color: rgb(176,242,182); 
 }
 
+#Paiement{
+    float: left;
+    width: 95%;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+#ConfirmationPaiement{
+    float: left;
+    width: 95%;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
 
 
 /* /////////////////////////// */

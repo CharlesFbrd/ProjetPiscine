@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Info Médecin</title>
+        <title>Prise De RDV</title>
         <meta charset="utf-8">
         <link href="style.css" rel="stylesheet" type="text/css" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -79,39 +79,45 @@
                         function RDVLundi(value){
                             document.getElementById("JourRdv").innerHTML = "Lundi  ";
                             document.getElementById("HeureRdv").innerHTML = value;
-                            document.getElementById("JourRdv").setValue("Lundi");
-                            document.getElementById("HeureRdv").setValue(value);
+                            document.getElementById("DonneeJourRdv").value="Lundi";
+                            document.getElementById("DonneeHeureRdv").value=value;
+                            $("#Soumettre").attr("disabled",false);
                         }
                         function RDVMardi(value){
                             document.getElementById("JourRdv").innerHTML = "Mardi  ";
                             document.getElementById("HeureRdv").innerHTML = value;
-                            document.getElementById("JourRdv").setValue("Mardi");
-                            document.getElementById("HeureRdv").setValue(value);
+                            document.getElementById("DonneeJourRdv").value="Mardi";
+                            document.getElementById("DonneeHeureRdv").value=value;
+                            $("#Soumettre").attr("disabled",false);
                         }
                         function RDVMercredi(value){
                             document.getElementById("JourRdv").innerHTML = "Mercredi  ";
                             document.getElementById("HeureRdv").innerHTML = value;
-                            document.getElementById("JourRdv").setValue("Mercredi");
-                            document.getElementById("HeureRdv").setValue(value);
+                            document.getElementById("DonneeJourRdv").value="Mercredi";
+                            document.getElementById("DonneeHeureRdv").value=value;
+                            $("#Soumettre").attr("disabled",false);
                         };
                         function RDVJeudi(value){
                             document.getElementById("JourRdv").innerHTML = "Jeudi  ";
                             document.getElementById("HeureRdv").innerHTML = value;
-                            document.getElementById("JourRdv").setValue("Jeudi");
-                            document.getElementById("HeureRdv").setValue(value);
+                            document.getElementById("DonneeJourRdv").value="Jeudi";
+                            document.getElementById("DonneeHeureRdv").value=value;
+                            $("#Soumettre").attr("disabled",false);
                         }
                         function RDVVendredi(value){
                             document.getElementById("JourRdv").innerHTML = "Vendredi  ";
                             document.getElementById("HeureRdv").innerHTML = value;
-                            document.getElementById("JourRdv").setValue("Vendredi");
-                            document.getElementById("HeureRdv").setValue(value);
-                        };
+                            document.getElementById("DonneeJourRdv").value="Vendredi";
+                            document.getElementById("DonneeHeureRdv").value=value;
+                            $("#Soumettre").attr("disabled",false);
+                        }
                         function RDVSamedi(value){
                             document.getElementById("JourRdv").innerHTML = "Samedi  ";
                             document.getElementById("HeureRdv").innerHTML = value;
-                            document.getElementById("JourRdv").setValue("Samedi");
-                            document.getElementById("HeureRdv").setValue(value);
-                        };
+                            document.getElementById("DonneeJourRdv").value="Samedi";
+                            document.getElementById("DonneeHeureRdv").value=value;
+                            $("#Soumettre").attr("disabled",false);
+                        }
                     </script>
                     <table border="1px">
                         <tr>
@@ -269,7 +275,7 @@
                     </table>
                 </div>
                 <div id="InfoRDV">
-                    <form action="ConfirmationRDV.php">
+                    <form action="ConfirmationRDV.php" method="post">
                         <table>
                             <tr>
                                 <td><label class="JHRdv" style="width:100%">Jour: </label></td>
@@ -278,10 +284,11 @@
                                 <td><label id="HeureRdv" name="HeureRdv" style="width:100%"></label></td>
                             </tr>
                             <tr>
-
+                                <td><input type="hidden"  id="DonneeJourRdv" name="DonneeJourRdv"></td>
+                                <td><input type="hidden"  id="DonneeHeureRdv" name="DonneeHeureRdv"></td>
                             </tr>
                             <tr>
-                                <td COLSPAN="4"><input type="submit" style="width:100%" value="Prendre le RDV"></input></td>
+                                <td COLSPAN="4"><input type="submit" id="Soumettre" style="width:100%" value="Prendre le RDV" disabled="disabled"></input></td>
                             </tr>
                         </table>
                     </form>

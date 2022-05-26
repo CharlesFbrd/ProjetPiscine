@@ -25,13 +25,15 @@ if ($db_found){
       if ($data["Mdp"]== $mdp){
          $_SESSION["connexion"] = 1; 
       } else {
-         $_SESSION["connexion"] = 0; 
+         $_SESSION["connexion"] = 0;
       }
    }; 
    
 
    if($_SESSION["connexion"]== 0){
-      $_SESSION["erreurConnexionPatient"] = "Identifiant ou mot de passe incorrect"; 
+      $_SESSION["erreurConnexionPatient"] = "Identifiant ou mot de passe incorrect";
+      $_SESSION["NomPatient"] = ""; 
+      $_SESSION["PrenomPatient"] = ""; 
       header('Location: connexionPatient.php');
 
    }
