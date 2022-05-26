@@ -157,6 +157,43 @@ h2{
     margin-bottom: 30px;
 }
 
+#service_depistage{
+    float: left;
+    margin-left: 20px;
+    margin-top: 20px;   
+}
+#service_biologie_preventive{
+    float: left;
+    margin-left: 20px;
+    margin-top: 20px;   
+}
+#service_biologie_femme{
+    float: left;
+    margin-left: 20px;
+    margin-top: 20px;   
+}
+#service_biologie_routine{
+    float: left;
+    margin-left: 20px;
+    margin-top: 20px;   
+}
+#service_cancerologie{
+    float: left;
+    margin-left: 20px;
+    margin-top: 20px;   
+}
+#service_gynecologie{
+    float: left;
+    margin-left: 20px;
+    margin-top: 20px;   
+}
+#priseDeRdvLabo2{
+    float: left;
+    margin-left: 400px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
 
 #tableau_addictologue{
     float: left;

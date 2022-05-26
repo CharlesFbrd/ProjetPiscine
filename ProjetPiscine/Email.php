@@ -63,29 +63,29 @@
                     $CarteVitalePatient=$data["CarteVitale"];
                 };
 
-                // $destinataire = 'charles.fabard1@outlook.fr';//$destinateur = $EmailPatient;
-                // // Pour les champs $expediteur / $copie / $destinataire, séparer par une virgule s'il y a plusieurs adresses
-                // $expediteur = 'charles.fabard@outlook.fr';
-                // $copie = '';
-                // $copie_cachee = '';
-                // $objet = 'Confirmation RDV Médical'; // Objet du message
-                // $headers  = 'MIME-Version: 1.0' . "\n"; // Version MIME
-                // $headers .= 'Reply-To: '.$expediteur."\n"; // Mail de reponse
-                // $headers .= 'Content-type: text/html; charset=ISO-8859-1'."\n"; // l'en-tete Content-type pour le format HTML
-                // $headers .= 'From: "Nom_de_expediteur"<'.$expediteur.'>'."\n"; // Expediteur
-                // $headers .= 'Delivered-to: '.$destinataire."\n"; // Destinataire
-                // $headers .= 'Cc: '.$copie."\n"; // Copie Cc
-                // $headers .= 'Bcc: '.$copie_cachee."\n\n"; // Copie cachée Bcc        
-                // $message = '<div style="width: 100%; text-align: center; font-weight: bold">Bonjour '+$NomPatient+' '+$PrenomPatient+',<br>'
-                // +'Votre rendez-vous le '+$Jour+' à '+$Heure+' est confirmé avec le Dr.'+$NomMedecin+' '+$PrenomMedecin+'</div>';
-                // if (mail($destinataire, $objet, $message, $headers)) // Envoi du message
-                // {
-                //     $confirmation = 'Le mail de confirmation a bien été envoyé ';
-                // }
-                // else // Non envoyé
-                // {
-                //     $confirmation = "Le mail de confirmation n'a pas pu être envoyé";
-                // }
+                $destinataire = 'charles.fabard1@outlook.fr';//$destinateur = $EmailPatient;
+                // Pour les champs $expediteur / $copie / $destinataire, séparer par une virgule s'il y a plusieurs adresses
+                $expediteur = 'charles.fabard@outlook.fr';
+                $copie = '';
+                $copie_cachee = '';
+                $objet = 'Confirmation RDV Médical'; // Objet du message
+                $headers  = 'MIME-Version: 1.0' . "\n"; // Version MIME
+                $headers .= 'Reply-To: '.$expediteur."\n"; // Mail de reponse
+                $headers .= 'Content-type: text/html; charset=ISO-8859-1'."\n"; // l'en-tete Content-type pour le format HTML
+                $headers .= 'From: "Nom_de_expediteur"<'.$expediteur.'>'."\n"; // Expediteur
+                $headers .= 'Delivered-to: '.$destinataire."\n"; // Destinataire
+                $headers .= 'Cc: '.$copie."\n"; // Copie Cc
+                $headers .= 'Bcc: '.$copie_cachee."\n\n"; // Copie cachée Bcc        
+                $message = '<div style="width: 100%; text-align: center; font-weight: bold">Bonjour '.$NomPatient.' '.$PrenomPatient.',<br>'
+                .'Votre rendez-vous le '.$Jour.' à '.$Heure.' est confirmé avec le Dr.'.$NomMedecin.' '.$PrenomMedecin.'</div>';
+                if (mail($destinataire, $objet, $message, $headers)) // Envoi du message
+                {
+                    $confirmation = 'Le mail de confirmation a bien été envoyé ';
+                }
+                else // Non envoyé
+                {
+                    $confirmation = "Le mail de confirmation n'a pas pu être envoyé";
+                }
 
                 // $objet = 'Facture';
                 // $message = '<div style="width: 100%; text-align: center; font-weight: bold">Bonjour '+$NomPatient+' '+$PrenomPatient+',<br>'

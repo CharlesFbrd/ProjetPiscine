@@ -27,27 +27,38 @@
             <div id="section">
                 <div id="service_depistage">
                     <h2>Service de Dépistage: </h2>
-                    <p></p>
+                    <p>Dans notre Laboratoire vous pouvez réaliser des tests PCR et antigénique sur rendez-vous uniquement.<br>
+                    Si vous cntractez des symptômes du COVID-19, isolez vous et prenez un rendez-vous pour vous faire dépister.<br>
+                    Contactez les gens avec qui vous avez été en contact ces derniers jours pour qu'eux aussi se fassent dépister.
+                    </p>
                 </div>
                 <div id="service_biologie_preventive">
                     <h2>Service de Biologie préventive: </h2>
-                    <p></p>
+                    <p>Des bilans pour prévenir les effets du vieillissement, optimiser votre capital santé ou explorer les causes de certains symptômes.<br>
+                    Obtenez des recommandations à partir de l'interprétation de vos résultats grâce à nos experts et/ou votre prescripteur.<br>
+                    En fonction de vos résultats, des recommandations médicales ou nutritionnelles seront mises en place avec votre prescripteur.<br>
+                    </p>
                 </div>
                 <div id="service_biologie_femme">
                     <h2>Service de Biologie de la femme enceinte: </h2>
-                    <p></p>
+                    <p>En France, environ 750 000 enfants naissent chaque année. Pendant la période périnatale, les professionnels de santé sont en première ligne pour accompagner les parents. L’Assurance Maladie propose également un accompagnement personnalisé pour les femmes dès leur déclaration de grossesse. Le point sur cet accompagnement et la prévention de certains facteurs de risque associés à la grossesse.<br>
+                    Nos médecins vous accompgnent tout au long de votre grossesse à l'aide de test permettant un développement du bébé sans compliquation et permettant d'éviter les risques survenant lors d'une grossesse.
+                    </p>
                 </div>
                 <div id="service_biologie_routine">
-                    <h2>Service de Routine: </h2>
-                    <p></p>
+                    <h2>Service de Biologie de Routine: </h2>
+                    <p>Il s’agit d’examens couramment prescrits pour la surveillance simple de la santé ou lors du suivi d’un traitement : biochimie clinique, bactériologie par culture des germes, tests d’hémostase, hématologie, sérologies fréquentes, hormonologie, marqueurs de cancers tumoraux, des anémies, de souffrance cardiaque.</p>
                 </div>
                 <div id="service_cancerologie">
                     <h2>Service de Cancerologie: </h2>
-                    <p></p>
+                    <p>Notre Laboratoire possède aussi un service de cancérologie dans lequel nous réalisons différents tests tel que des prélèvements de sang ou d'urine.<br>
+                    Ces tests nous permettent de prévenir et de réagir au plus tôt face à un cancer se développant
+                    </p>
                 </div>
                 <div id="service_gynecologie">
-                    <h2>Service de Biologie préventive: </h2>
-                    <p></p>
+                    <h2>Service de Gynécologie: </h2>
+                    <p>L’unité s’appuie sur un plateau technique de haut niveau. Elle travaille en étroite relation avec le service d’imagerie médicale.<br>
+                    L’unité  assure des échographies gynécologiques (le service d’imagerie est équipé de 3 salles d’échographie) mais aussi des investigations de sénologie (maladies du sein) au moyen de : mammographies, échographies mammaires, micro-biopsies et macro-biopsies mammaires sous échographie et sous stéréotaxie, IRM mammaires.</p>
                 </div>
                 <div id="priseDeRdvLabo2">
                     <a href="PriseDeRDVLabo.php"><img src="btn_Rdv2.png" alt="boutonRDV" width="200" height="70"></a>
