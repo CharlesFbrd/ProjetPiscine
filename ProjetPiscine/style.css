@@ -204,8 +204,37 @@ h2{
     float: left;
     width: 80%;
     margin-top: 25px;
-    margin-left: 50px;
+    margin-left: 100px;
     margin-bottom: 25px;
+}
+#InfoRDV{
+    float: left;
+    width: 80%;
+    margin-top: 10px;
+    margin-left: 500px;
+    margin-bottom: 25px;
+}
+
+input[type=submit] {
+    background-color: #0c88c6;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    cursor: pointer; /* souris change qd sur bouton */
+    width: 80%;
+    font-size: 14px;
+    border-radius: 10px;
+}
+
+input[type=submit]:hover { /* couleur quand souris sur le bouton */ 
+    background-color: white;
+    color: #2d80e1;
+    border: 1px solid #2d80e1;
+    font-size: 12px;
+}
+.JHRdv{
+    color: #2d80e1;
+    font-size: 120%;
 }
 
 .infoMedecinPlanning{

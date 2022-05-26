@@ -102,7 +102,7 @@
         <div id="wrapper">
             <div id="header">
                 <div id="logo_compte">
-                <a href="Connexion.php"><img src="boutonMonCompte.png" alt="logoCompte" width="150" height="50"></img></a>
+                <a href="seConnecter.php"><img src="boutonMonCompte.png" alt="logoCompte" width="150" height="50"></img></a>
                 </div>
             </div>
             <div id="navigation">
