@@ -107,7 +107,7 @@
                             paiement+='<tr><td>Date d expiration de la carte: </td><td><input align="middle" type="text" name="DateCarte" value="MM/AA" required></input></td></tr>';
                             paiement+='<tr><td>Code de sécurité: </td><td><input align="middle" type="text" name="CodeCarte" value="XXX" required></input></td></tr>';
                             paiement+='<tr><td>Montant: </td><td><label>50€</label></td></tr>';
-                            paiement+='<tr><td COLSPAN="2" ><input style="width:100%" type="submit" value="Payer"></inpu></td></tr></table>';
+                            paiement+='<tr><td COLSPAN="2" ><input style="width:100%" type="submit" value="Payer"></input></td></tr></table>';
                             paiement+='</form>';
                             $("#Paiement").append(paiement);
                         }else{
