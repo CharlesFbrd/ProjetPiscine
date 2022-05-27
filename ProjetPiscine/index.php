@@ -14,6 +14,7 @@
                 <div id="logo_compte">
                     <a href="seConnecter.php"><img src="boutonMonCompte.png" alt="logoCompte" width="150" height="50"></img></a>
                 </div>
+                
             </div>
             <div id="navigation">
                 <img src="boutonAccueil.png"></img>

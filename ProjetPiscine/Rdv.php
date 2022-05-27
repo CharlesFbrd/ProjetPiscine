@@ -87,7 +87,7 @@
                             var Bureau = <?php echo json_encode($BureauMedecin)?>;
                             var Telephone = <?php echo json_encode($TelephoneMedecin)?>;
                             var Email = <?php echo json_encode($EmailMedecin)?>;
-                            var affichage = '<form action="AnnulationRdv.php" methode="post">';
+                            var affichage = '<form action="AnnulationRdv.php" method="post">';
                             var j=0;
                             for(var i=0; i<IdRdv.length; i++){
                                 j = i +1;
@@ -96,7 +96,7 @@
                                 affichage += '<tr><td id="libelle">Specialite: </td><td>'+Specialite[i]+'</td><td id="libelle">Bureau: </td><td>'+Bureau[i]+'</td></tr>';
                                 affichage += '<tr><td id="libelle">Telephone: </td><td>+33 '+Telephone[i]+'</td><td id="libelle">Email: </td><td>'+Email[i]+'</td></tr>';
                                 affichage += '<tr><td id="libelle">Jour: </td><td>'+Jour[i]+'</td><td id="libelle">Heure: </td><td>'+Heure[i]+'</td></tr>';
-                                affichage += '<tr><td><input name="annulation" type="hidden" value="'+IdRdv[i]+'"></input></td><td></td><td COLSPAN="2"><input type="submit" value="Annuler le RDV"></input></td></tr></table>';
+                                affichage += '<tr><td></td><td></td><td COLSPAN="2"><button value="'+IdRdv[i]+'" name="annulation" id="annulation">Annuler le RDV</button></td></tr></table>';
                             }
                             affichage += '</form>';
                             $("#AffichageRDV").append(affichage);

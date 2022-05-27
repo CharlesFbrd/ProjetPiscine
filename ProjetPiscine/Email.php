@@ -119,16 +119,16 @@
 
             <div id="section">
                 <div id="ConfirmationPaiement">
-                    <form action="index.php" methode="post">';
+                    <form action="index.php" methode="post">
                         <table align="center">
                             <tr>
                                 <td align="middle"><h2>Votre RDV est confirmé!</h2></td>
                             </tr>
                             <tr>
-                                <td align="middle"><h3><?php echo $confirmation?></h3</td>
+                                <td align="middle"><h3><?php echo $confirmation?></h3></td>
                             </tr>
                             <tr>
-                                <td align="middle"><h3><?php echo $confirmationFacture?></h3</td>
+                                <td align="middle"><h3><?php echo $confirmationFacture?></h3></td>
                             </tr>
                             <tr>
                                 <td align="middle"><input type="submit" value="Retour Accueil"></input></td>

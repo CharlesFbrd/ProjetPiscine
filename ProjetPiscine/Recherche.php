@@ -4,43 +4,13 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Confirmation RDV</title>
+        <title>Recherche</title>
         <meta charset="utf-8">
         <link href="style.css" rel="stylesheet" type="text/css" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     </head>
     <body>
 
-        <?php 
-            $IdRdv = $_POST["annulation"];
-            $db = "projetpiscine";
-            $site = "localhost:3308";
-            $db_id="root";
-            $db_mdp="root";
-        
-            $db_handle = mysqli_connect($site, $db_id, $db_mdp);
-            $db_found = mysqli_select_db($db_handle, $db);
-            if($db_found){
-
-                $sql = "SELECT NomMedecin,Jour,Heure FROM rdv WHERE ID ='$IdRdv'";
-                $res = mysqli_query($db_handle,$sql);
-                while($data = mysqli_fetch_assoc($res)){
-                    $NomMedecin=$data["NomMedecin"];
-                    $Jour=$data["Jour"];
-                    $Heure=$data["Heure"];
-                };
-
-
-                $sql = "DELETE FROM rdv WHERE ID='$IdRdv'";
-                $res = mysqli_query($db_handle,$sql);
-                $sql = "UPDATE disponibilite SET Dispo=1 WHERE Nom='$NomMedecin' AND Jour='$Jour' AND Heure='$Heure'";
-                $res = mysqli_query($db_handle,$sql);
-            }else{
-                echo "Unable to connect <br>";
-            }
-        ?>
-
-        
         <div id="wrapper">
             <div id="header">
                 <div id="logo_compte">
@@ -50,19 +20,22 @@
             <div id="navigation">
                 <a href="index.php"><img src="boutonAccueil.png"></img></a>
                 <a href="Parcourir.php"><img src="boutonParcourir.png"></img></a>
-                <a href="Recherche.php"><img src="boutonRecherche.png"></img></a>
-                <img src="boutonRdv.png"></img>
+                <img src="boutonRecherche.png"></img>
+                <a href="Rdv.php"><img src="boutonRdv.png"></img></a>s
             </div>
 
             <div id="section">
-                <div id="ConfirmationPaiement">
-                    <form action="index.php" methode="post">
+                <div id="Recherche">
+                <form action="ResultatRecherche.php" method="post">
                         <table align="center">
                             <tr>
-                                <td align="middle"><h2>Votre RDV a bien été annulé!</h2></td>
+                                <td align="middle"><h2>Rechercher une Spécialité: </h2></td>
                             </tr>
                             <tr>
-                                <td align="middle"><input type="submit" value="Retour Accueil"></input></td>
+                                <td align="middle"><input type="text" name="recherche" required></td>
+                            </tr>
+                            <tr>
+                                <td align="middle"><input type="submit" value="Rechercher"></input></td>
                             </tr>
                         </table>
                     </form>

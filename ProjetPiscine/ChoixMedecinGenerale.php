@@ -54,7 +54,7 @@
                     var Prenom=<?php echo json_encode($Prenom)?>;
                     var Medecins='<form action="InfoMedecin.php" method="post"><table><tr><td><h2>Médecins Généralistes:</h2></td></tr>';
                     for(var i=0; i<Nom.length; i++){
-                        Medecins += '<tr><td><button id="btn_Nom_Medecin" name="btn_Nom_Medecin" style="width:100%" value="'+Nom[i]+'">'+Nom[i]+" "+Prenom[i]+'</button></td></tr>';
+                        Medecins += '<tr><td><button id="annulation" name="btn_Nom_Medecin" style="width:100%" value="'+Nom[i]+'">'+Nom[i]+" "+Prenom[i]+'</button></td></tr>';
                     }
                     Medecins +='</table></form>';
                     $("#tableau").append(Medecins);
