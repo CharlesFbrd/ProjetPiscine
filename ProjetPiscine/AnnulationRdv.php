@@ -48,10 +48,26 @@
                 </div>
             </div>
             <div id="navigation">
-                <a href="index.php"><img src="boutonAccueil.png"></img></a>
-                <a href="Parcourir.php"><img src="boutonParcourir.png"></img></a>
-                <a href="Recherche.php"><img src="boutonRecherche.png"></img></a>
-                <img src="boutonRdv.png"></img>
+            <div class ="btn_navigation">
+                    <form action="index.php" method="post">
+                        <input type="submit" value="Accueil">
+                    </form>
+                </div>
+                <div class ="btn_navigation">
+                    <form action="Parcourir.php" method="post">
+                        <input type="submit" value="Tout Parcourir">
+                    </form>
+                </div>
+                <div class ="btn_navigation">
+                    <form action="Recherche.php" method="post">
+                        <input type="submit" value="Rechercher">
+                    </form>
+                </div>
+                <div class ="btn_navigation">
+                    <form action="Rdv.php" method="post">
+                        <input type="submit" value="Rendez-vous">
+                    </form>
+                </div>
             </div>
 
             <div id="section">
