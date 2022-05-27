@@ -26,7 +26,7 @@
                             
 
                         }else{
-                            var affichage = '<a href="seConnecter.php"><img src="boutonMonCompte.png" alt="logoCompte" width="150" height="50"></img></a>';
+                            var affichage = '<div id="logo_compte"><a href="seConnecter.php"><img src="boutonMonCompte.png" alt="logoCompte" width="150" height="50"></img></a></div>';
                             $("#boxProfilPatient").append(affichage);
                         }
                 </script>

@@ -39,11 +39,26 @@
                 echo "Unable to connect <br>";
             }
         ?>
-
+        <?php
+            $connexion = $_SESSION["connexion"];
+        ?>
         <div id="wrapper">
             <div id="header">
-                <div id="logo_compte">
-                <a href="seConnecter.php"><img src="boutonMonCompte.png" alt="logoCompte" width="150" height="50"></img></a>
+            <div id="boxProfilPatient">
+                <script type="text/javascript">
+                    var connexion = <?php echo json_encode($connexion)?>;
+                        if(connexion==1){
+                            var affichage = '<form action="monComptePatient.php">';
+                            affichage += '<input id = "btnProfilMedecin" type="submit" value = "Mon profil">';
+                            affichage += '</form>';
+                            $("#boxProfilPatient").append(affichage);
+                            
+
+                        }else{
+                            var affichage = '<div id="logo_compte"><a href="seConnecter.php"><img src="boutonMonCompte.png" alt="logoCompte" width="150" height="50"></img></a></div>';
+                            $("#boxProfilPatient").append(affichage);
+                        }
+                </script>
                 </div>
             </div>
             <div id="navigation">
