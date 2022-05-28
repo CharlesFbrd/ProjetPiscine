@@ -35,9 +35,6 @@
                 <form action="edt.php">
                     <input type="submit" value = "Modifier l'edt">
                 </form>
-                <form action="majLabo.php">
-                    <input type="submit" value = "Maj laboratoire">
-                </form>
             </div>
 
             <div id="section">
