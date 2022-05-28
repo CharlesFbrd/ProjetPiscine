@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Ajout d'un médecin</title>
+    <title>Modification d'emploi du temps</title>
     <meta charset="UTF-8">
     <link href="ajouterMedecin.css" rel="stylesheet" type="text/css" />
 </head>
@@ -24,28 +24,12 @@
 
     <div id="box">
             
-            <form action="confirmationAjoutMedecin.php" method="post">
-                <h2>Ajouter un médecin</h2>
+            <form action="confirmationModificationEdt.php" method="post">
+                <h2>Modifier l'EDT d'un médecin</h2>
                 <p>Veuillez renseigner ses informations.</p>
                 <br>
                 
-                <input type="text" placeholder="Nom" name="nom" required>
-
-                <input type="text" placeholder="Prénom" name="prenom" required>
-
-                <input type="text" placeholder="Spécialité" name="specialite" required>
-
-                <input type="text" placeholder="Bureau" name="bureau" required>
-
-                <input type="number" placeholder="Téléphone" name="telephone" required>
-
-                <input type="text" placeholder="Email" name="email" required>
-
-                <input type="password" placeholder="Mot de passe" name="mdp" required>
-
-                <input type="text" placeholder="url Planning" name="planning" required>
-
-                <input type="text" placeholder="url photo" name="photo" required>
+                <input type="text" placeholder="Nom du Médecin" name="nom" required>
                 
                 <p>Jours de travail: </p>
                 <br>
@@ -77,7 +61,7 @@
                 </table>
 
                 <br>
-                <input type="submit" id='submit' value='Ajouter le médecin à la base de données' >
+                <input type="submit" id='submit' value='Modifier l EDT' >
             
         
             </form>
