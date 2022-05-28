@@ -1,0 +1,116 @@
+h2{
+    color: #2d80e1;
+}
+
+
+#wrapper{
+    background-color: whitesmoke;
+    color: black;
+    float : left;
+    width : 1400px;
+    height: 1650px;
+    margin-left : 10px;
+    margin-top : 10px;
+    margin-right : 10px;
+    box-align : center;
+}
+
+/* //////////////////////////////////////////////////// */
+#header{
+    background-image: url("headerOmnesSante.png");
+    float : left;
+    width : 100%;
+    height : 347px;
+}
+
+#boxProfilMedecin{
+    float : right;
+    width:150px;
+    margin-top: 5px;
+    margin-right : 30px;
+    background-color: #11ffee00; /* fond transparent */
+}
+
+
+#btnProfilMedecin{
+    float: right;
+    background-color: #11ffee00;
+    border: none;
+    cursor: pointer; /* souris change qd sur bouton */
+    font-size: 15px;
+    font-family: Georgia;
+}
+
+/* /////////////////////////////////////// */
+#navigation{
+    float : left;
+    width: 15%;
+    margin-top: 3%;
+    background: #fff;
+    text-align: center;
+    border-radius: 10px;
+}
+
+form{
+    width:100%;
+    padding: 10px;
+    padding-bottom: 20px;
+    background: whitesmoke;
+    font-family: 'Georgia';
+    text-align: center;
+}
+
+#formMonProfil{
+    width:100%;
+    margin: 0 auto; 
+    background-color: #11ffee00; /* transparent */
+    font-family: 'Georgia';
+    text-align: center;
+}
+
+input[type=submit] {
+    background-color: #0c88c6;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    cursor: pointer; /* souris change qd sur bouton */
+    width: 80%;
+    font-size: 14px;
+    border-radius: 10px;
+}
+
+input[type=submit]:hover { /* couleur quand souris sur le bouton */ 
+    background-color: white;
+    color: #2d80e1;
+    border: 1px solid #2d80e1;
+    font-size: 14px;
+    border-radius: 10px;
+}
+
+
+/* ////////////////////////////////////// */
+#section{
+    float : left;
+    width : 80%;
+}
+#libelle{
+    font-size: 120%;
+    font-weight: bold;
+}
+
+
+/* /////////////////////////// */
+#footer{
+    float:left;
+    background-color : #2d80e1;
+    color : white;
+    width : 100%;
+    height : 400px;
+    font-size : 80%;
+    text-align : center;
+}
+#img_map{ 
+    float : right; 
+    margin-top: 40px; 
+    margin-right: 50px; 
+}
