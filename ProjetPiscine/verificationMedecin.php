@@ -21,7 +21,7 @@ if ($db_found){
    $result = mysqli_query($db_handle, $sql); // recherche de la requête dans la bdd 
    while($data = mysqli_fetch_assoc($result)){
       $nom = $data["Nom"]; 
-      $prenom = $data["Prenom"]; 
+      $prenom = $data["Prenom"];  
       if ($data["Mdp"]== $mdp){
          $_SESSION["connexion"] = 1; 
       } else {
@@ -39,7 +39,8 @@ if ($db_found){
     $_SESSION["erreurConnexionMedecin"] = ""; 
     $_SESSION["NomMedecin"] = $nom; 
     $_SESSION["PrenomMedecin"] = $prenom; 
-    header('Location: index.php'); 
+
+    header('Location: profilMedecin.php'); 
 
  }
    

@@ -38,8 +38,8 @@ if ($db_found){
    else if($_SESSION["connexion"]== 1){
       $_SESSION["erreurConnexionAdmin"] = ""; 
       $_SESSION["NomAdmin"] = $nom; 
-    $_SESSION["PrenomAdmin"] = $prenom; 
-      header('Location: index.php'); 
+      $_SESSION["PrenomAdmin"] = $prenom; 
+      header('Location: profilAdmin.php'); 
    }
    
 
