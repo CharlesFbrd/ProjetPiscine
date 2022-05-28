@@ -21,7 +21,7 @@
 
 // Connexion à la bdd
 $database = "projetpiscine";
-$db_handle = mysqli_connect('localhost:3308', 'root', 'root'); 
+$db_handle = mysqli_connect('localhost', 'root', 'root'); 
 $db_found = mysqli_select_db($db_handle, $database);
 
 $nomMedecin = $_SESSION["NomMedecin"]; 
@@ -38,13 +38,9 @@ if ($db_found){
 
     };
 
-
-    
  } else { // si on ne trouve pas la bdd 
     echo "<p> La connexion à la base de données a échoué. </p>"; 
  }
-
-
 
 ?>
 
