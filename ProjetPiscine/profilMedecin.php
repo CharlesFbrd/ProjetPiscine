@@ -3,21 +3,21 @@
     session_start(); 
 
     // Connexion à la bdd
-$database = "projetpiscine";
-$db_handle = mysqli_connect('localhost', 'root', 'root'); 
-$db_found = mysqli_select_db($db_handle, $database);
+// $database = "projetpiscine";
+// $db_handle = mysqli_connect('localhost:3308', 'root', 'root'); 
+// $db_found = mysqli_select_db($db_handle, $database);
 
-if ($db_found){
+// if ($db_found){
 
-    $sql = "SELECT Photo FROM medecin WHERE Nom = ".$_SESSION["NomMedecin"]." AND Prenom = ".$_SESSION["PrenomMedecin"]." "; 
-    $result = mysqli_query($db_handle, $sql); // recherche de la requête dans la bdd 
-    while($data = mysqli_fetch_assoc($result)){
-       $nomPdp = $data["Photo"]; 
-    };
+//     $sql = "SELECT Photo FROM medecin WHERE Nom = ".$_SESSION["NomMedecin"]." AND Prenom = ".$_SESSION["PrenomMedecin"]." "; 
+//     $result = mysqli_query($db_handle, $sql); // recherche de la requête dans la bdd 
+//     while($data = mysqli_fetch_assoc($result)){
+//        $nomPdp = $data["Photo"]; 
+//     };
     
- } else { // si on ne trouve pas la bdd 
-    echo "<p> La connexion à la base de données a échoué. </p>"; 
- }
+//  } else { // si on ne trouve pas la bdd 
+//     echo "<p> La connexion à la base de données a échoué. </p>"; 
+//  }
 
 
 //  <?php echo "" <img src=".$nomPdp." >;  /* ICI */ 

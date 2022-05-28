@@ -1,5 +1,8 @@
 <?php
     session_start();
+    if(isset($_POST["Deconnexion"])){
+        $_SESSION["connexion"] = 0;
+    }
 ?>
 <!DOCTYPE html>
 <html>

@@ -10,9 +10,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Mon compte adminitrateur</title>
+    <title>Mon compte Patient</title>
     <meta charset="UTF-8">
-    <link href="monCompteAdmin.css" rel="stylesheet" type="text/css" />
+    <link href="monComptePatient.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -24,18 +24,22 @@ $database = "projetpiscine";
 $db_handle = mysqli_connect('localhost:3308', 'root', 'root'); 
 $db_found = mysqli_select_db($db_handle, $database);
 
-$nomAdmin = $_SESSION["NomAdmin"]; 
-$prenomAdmin = $_SESSION["PrenomAdmin"];
+$nomPatient = $_SESSION["NomPatient"]; 
+$prenomPatient = $_SESSION["PrenomPatient"];
 
 if ($db_found){
 
-    $sql = "SELECT Email, Photo FROM medecin WHERE Nom = '$nomAdmin' AND Prenom = '$prenomAdmin' "; 
+    $sql = "SELECT Adresse1,Ville,CodePostal,Email,CarteVitale FROM patient WHERE Nom = '$nomPatient' AND Prénom = '$prenomPatient' "; 
     $result = mysqli_query($db_handle, $sql); // recherche de la requête dans la bdd 
     while($data = mysqli_fetch_assoc($result)){
-        $email = $data["Email"];
-        $photoPortrait = $data["Photo"];  
+        $adresse = $data["Adresse1"]; // les variables ne sont pas récupérées
+        $ville = $data["Ville"];
+        $CodePostal = $data["CodePostal"];
+        $email = $data["Email"]; 
+        $CarteVitale= $data["CarteVitale"]; 
 
     };
+
 
     
  } else { // si on ne trouve pas la bdd 
@@ -50,23 +54,22 @@ if ($db_found){
 
     
     <div id="box">
-                <form action="profilAdmin.php" method="post">
+                <form action="index.php" method="post">
                     <h2>Votre profil</h2> 
-                    <br>
                     <?php
-
-                        //echo '<img width="50%" src="'.$nom_photo.' >';
+                        echo "" .$_SESSION["NomPatient"];
+                        echo " " .$_SESSION["PrenomPatient"];
+                        echo "<br>"; 
+                        echo "" .$adresse;
+                        echo "<br>"; 
+                        echo "" .$ville." ".$CodePostal; 
+                        echo "<br>"; 
+                        echo "<br>"; 
+                        echo "" .$email;
+                        echo "<br>"; 
                         echo "<br>";
-
-                        echo "" .$_SESSION["NomAdmin"];
-                        echo " " .$_SESSION["PrenomAdmin"];
-                        echo "<br>"; 
-                        echo "<br>"; 
-                        echo "" .$email; // ne s'affiche pas idk why 
-                        echo "<br>"; 
-                        echo "<br>"; 
-                        echo "<br>"; 
-                        echo "<br>"; 
+                        echo "" .$CarteVitale;
+                        echo "<br>";
 
                     ?>
                     
@@ -75,7 +78,7 @@ if ($db_found){
                     <input type="submit" id='submit' value='Retour'>
                 
                 </form>
-    </div>    
+    </div>   
 
     <div id = "boxDeconnexion">
                 <form id = "formDeconnexion" action="index.php" method="post">

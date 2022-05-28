@@ -21,7 +21,7 @@
 
 // Connexion à la bdd
 $database = "projetpiscine";
-$db_handle = mysqli_connect('localhost', 'root', 'root'); 
+$db_handle = mysqli_connect('localhost:3308', 'root', 'root'); 
 $db_found = mysqli_select_db($db_handle, $database);
 
 $nomMedecin = $_SESSION["NomMedecin"]; 
@@ -79,14 +79,7 @@ if ($db_found){
 
     <div id = "boxDeconnexion">
                 <form id = "formDeconnexion" action="index.php" method="post">
-                    <input id = "btnDeconnexion" type="submit" id='submit' value='Déconnexion'>
-                    <?php
-
-                        $_SESSION["connexion"] = 0; 
-                        $_SESSION["NomMedecin"] = ""; 
-                        $_SESSION["PrenomMedecin"] = "";
-
-                    ?> 
+                    <input id = "btnDeconnexion" type="submit" name="Deconnexion" value="Déconnexion">
                 </form>
 
     </div>
