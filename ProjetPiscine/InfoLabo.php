@@ -16,7 +16,8 @@
             $Nom = $_SESSION["NomMedecin"];
             $planning = array();
             $db = "projetpiscine";
-            $site = "localhost:3308";
+            $site = "localhost";
+            $site = "localhost";
             $db_id="root";
             $db_mdp="root";
         

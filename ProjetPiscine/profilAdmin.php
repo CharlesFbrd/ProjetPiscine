@@ -26,7 +26,7 @@
                 <form action="profilAdmin.php">
                     <input type="submit" value = "Accueil">
                 </form>
-                <form action="ajouterMedecin.php">
+                <form action="AjouterSupprimerM.php">
                     <input type="submit" value = "Maj Médecin">
                 </form>
                 <form action="ajouterCV.php">

@@ -1,0 +1,37 @@
+<?php
+
+    session_start(); 
+
+?>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Médecin ajouté</title>
+    <meta charset="UTF-8">
+    <link href="medecinAjoute.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<div id = wrapper>
+    
+    <div id="box">
+                <form action="ajouterMedecin.php" method="post">
+                    <h2>Votre profil</h2> 
+                    <br>
+                    <p> Le médecin a bien été ajouté au registre</p>
+                    <br>
+                    <input type="submit" id='submit' value='Ok'>
+                
+                </form>
+    </div>    
+
+</div>
+
+
+</body>
+</html>
+
+

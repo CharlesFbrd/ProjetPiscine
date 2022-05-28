@@ -1,0 +1,73 @@
+body{
+    background: #eef7fe;
+}
+
+
+
+h2{
+    text-align: center;
+}
+
+
+#wrapper{
+    color : black;
+    float : left;
+    width : 1400px;
+    height : 700px;   
+    margin-left : 10px;
+    margin-top : 10px;
+    margin-right : 10px;
+    box-align : center;
+}
+
+
+#header{
+    background-image: url("headerConnexionOmnesSante.png");
+    float : left;
+    width : 100%;
+    height : 20%;
+}
+
+#logo_compte{
+    float: right;
+    margin-top : 20px;
+    margin-right : 2%;
+}
+
+#boxProfils{
+    width:400px;
+    margin:0 auto;
+    margin-top:10%;
+    background: #fff;
+    border-radius: 10px;
+}
+
+
+form {
+    width:100%;
+    padding: 10px;
+    background: #fff;
+    font-family: 'Georgia';
+    text-align: center;
+    border-radius: 10px;
+}
+
+
+input[type=submit] {
+    background-color: #0c88c6;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    cursor: pointer; /* souris change qd sur bouton */
+    width: 80%;
+    font-size: 14px;
+    border-radius: 10px;
+}
+
+input[type=submit]:hover { /* couleur quand souris sur le bouton */ 
+    background-color: white;
+    color: #2d80e1;
+    border: 1px solid #2d80e1;
+    font-size: 14px;
+    border-radius: 10px;
+}
