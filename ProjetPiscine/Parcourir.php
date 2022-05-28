@@ -7,19 +7,52 @@
         <title>Tout parcourir</title>
         <meta charset="utf-8">
         <link href="style.css" rel="stylesheet" type="text/css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     </head>
     <body>
+        <?php
+            $connexion = $_SESSION["connexion"];
+        ?>
         <div id="wrapper">
             <div id="header">
-                <div id="logo_compte">
-                <a href="Connexion.php"><img src="boutonMonCompte.png" alt="logoCompte" width="150" height="50"></img></a>
+            <div id="boxProfilPatient">
+                <script type="text/javascript">
+                    var connexion = <?php echo json_encode($connexion)?>;
+                        if(connexion==1){
+                            var affichage = '<form action="monComptePatient.php">';
+                            affichage += '<input id = "btnProfilMedecin" type="submit" value = "Mon profil">';
+                            affichage += '</form>';
+                            $("#boxProfilPatient").append(affichage);
+                            
+
+                        }else{
+                            var affichage = '<div id="logo_compte"><a href="seConnecter.php"><img src="boutonMonCompte.png" alt="logoCompte" width="150" height="50"></img></a></div>';
+                            $("#boxProfilPatient").append(affichage);
+                        }
+                </script>
                 </div>
             </div>
             <div id="navigation">
-                <a href="index.php"><img src="boutonAccueil.png"></img></a>
-                <img src="boutonParcourir.png"></img>
-                <a href="Recherche.php"><img src="boutonRecherche.png"></img></a>
-                <a href="Rdv.php"><img src="boutonRdv.png"></img></a>
+            <div class ="btn_navigation">
+                    <form action="index.php" method="post">
+                        <input type="submit" value="Accueil">
+                    </form>
+                </div>
+                <div class ="btn_navigation">
+                    <form action="Parcourir.php" method="post">
+                        <input type="submit" value="Tout Parcourir">
+                    </form>
+                </div>
+                <div class ="btn_navigation">
+                    <form action="Recherche.php" method="post">
+                        <input type="submit" value="Rechercher">
+                    </form>
+                </div>
+                <div class ="btn_navigation">
+                    <form action="Rdv.php" method="post">
+                        <input type="submit" value="Rendez-vous">
+                    </form>
+                </div>
             </div>
             <div id="section">
                 <div id="btn_generale">
@@ -29,7 +62,7 @@
                     <a href="ChoixMedecinsSpecialistes.php"><img src="boutonMedecinsSpecialistes.png" alt="boutonMS" width="300" height="100"></img></a>
                 </div>
                 <div id="btn_labo">
-                <a href="ChoixLaboratoire.php"><img src="boutonLaboratoire.png" alt="boutonLabo" width="300" height="100"></img></a>
+                <a href="InfoLabo.php"><img src="boutonLaboratoire.png" alt="boutonLabo" width="300" height="100"></img></a>
                 </div>
             </div>
             <div id="footer">

@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Choix Médecin</title>
+        <title>Confirmation RDV</title>
         <meta charset="utf-8">
         <link href="style.css" rel="stylesheet" type="text/css" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -12,8 +12,7 @@
     <body>
 
         <?php 
-            $Nom = array();
-            $Prenom = array();
+            $IdRdv = $_POST["annulation"];
             $db = "projetpiscine";
             $site = "localhost:3308";
             $db_id="root";
@@ -22,12 +21,20 @@
             $db_handle = mysqli_connect($site, $db_id, $db_mdp);
             $db_found = mysqli_select_db($db_handle, $db);
             if($db_found){
-                $sql = "SELECT Nom,Prenom FROM medecin WHERE Specialite='Generaliste'";
+
+                $sql = "SELECT NomMedecin,Jour,Heure FROM rdv WHERE ID ='$IdRdv'";
                 $res = mysqli_query($db_handle,$sql);
                 while($data = mysqli_fetch_assoc($res)){
-                    $Nom[]=$data["Nom"];
-                    $Prenom[]=$data["Prenom"];
+                    $NomMedecin=$data["NomMedecin"];
+                    $Jour=$data["Jour"];
+                    $Heure=$data["Heure"];
                 };
+
+
+                $sql = "DELETE FROM rdv WHERE ID='$IdRdv'";
+                $res = mysqli_query($db_handle,$sql);
+                $sql = "UPDATE disponibilite SET Dispo=1 WHERE Nom='$NomMedecin' AND Jour='$Jour' AND Heure='$Heure'";
+                $res = mysqli_query($db_handle,$sql);
             }else{
                 echo "Unable to connect <br>";
             }
@@ -79,17 +86,17 @@
             </div>
 
             <div id="section">
-                <div id="tableau">
-                    <script type="text/javascript">
-                    var Nom=<?php echo json_encode($Nom)?>;
-                    var Prenom=<?php echo json_encode($Prenom)?>;
-                    var Medecins='<form action="InfoMedecin.php" method="post"><table><tr><td><h2>Médecins Généralistes:</h2></td></tr>';
-                    for(var i=0; i<Nom.length; i++){
-                        Medecins += '<tr><td><button id="annulation" name="btn_Nom_Medecin" style="width:100%" value="'+Nom[i]+'">'+Nom[i]+" "+Prenom[i]+'</button></td></tr>';
-                    }
-                    Medecins +='</table></form>';
-                    $("#tableau").append(Medecins);
-                    </script>
+                <div id="ConfirmationPaiement">
+                    <form action="index.php" methode="post">
+                        <table align="center">
+                            <tr>
+                                <td align="middle"><h2>Votre RDV a bien été annulé!</h2></td>
+                            </tr>
+                            <tr>
+                                <td align="middle"><input type="submit" value="Retour Accueil"></input></td>
+                            </tr>
+                        </table>
+                    </form>
                 </div>
             </div>
 

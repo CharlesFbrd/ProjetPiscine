@@ -18,7 +18,7 @@ $mdpc = isset($_POST["mdpC"])? $_POST["mdpC"] : "";
 
 // Connexion à la bdd 
 $database = "projetpiscine";
-$db_handle = mysqli_connect('localhost', 'root', 'root'); 
+$db_handle = mysqli_connect('localhost:3308', 'root', 'root'); 
 $db_found = mysqli_select_db($db_handle, $database);
 if($mdp != $mdpc){
     $_SESSION["erreurCreationCompte"] = "Les mots de passe ne sont pas identiques"; 
@@ -31,8 +31,7 @@ else {
 
 if($db_found){
 
-    $sql = "INSERT INTO patient (Nom, Prénom, Adresse1, ComplementAdresse, Ville, Pays, NumeroTelephone, Email, CarteVitale, Mdp)
-                     VALUES ('$nom', '$prenom', '$adresse1', '$adresse2', '$ville', '$pays', '$telephone', '$email', '$nCarteVitale', '$mdp')"; 
+    $sql = "INSERT INTO patient (Nom, Prénom, Adresse1, ComplementAdresse, Ville, CodePostal, Pays, NumeroTelephone, Email, CarteVitale, Mdp)VALUES ('$nom', '$prenom', '$adresse1', '$adresse2', '$ville', '$codePostal', '$pays', '$telephone', '$email', '$nCarteVitale', '$mdp')"; 
     $result = mysqli_query($db_handle, $sql); // recherche de la requête dans la bdd 
 
     header('Location: index.php'); 

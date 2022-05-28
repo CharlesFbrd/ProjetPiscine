@@ -4,35 +4,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Choix Médecin</title>
+        <title>Recherche</title>
         <meta charset="utf-8">
         <link href="style.css" rel="stylesheet" type="text/css" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     </head>
     <body>
-
-        <?php 
-            $Nom = array();
-            $Prenom = array();
-            $db = "projetpiscine";
-            $site = "localhost:3308";
-            $db_id="root";
-            $db_mdp="root";
-        
-            $db_handle = mysqli_connect($site, $db_id, $db_mdp);
-            $db_found = mysqli_select_db($db_handle, $db);
-            if($db_found){
-                $sql = "SELECT Nom,Prenom FROM medecin WHERE Specialite='Generaliste'";
-                $res = mysqli_query($db_handle,$sql);
-                while($data = mysqli_fetch_assoc($res)){
-                    $Nom[]=$data["Nom"];
-                    $Prenom[]=$data["Prenom"];
-                };
-            }else{
-                echo "Unable to connect <br>";
-            }
-        ?>
-
         <?php
             $connexion = $_SESSION["connexion"];
         ?>
@@ -79,17 +56,20 @@
             </div>
 
             <div id="section">
-                <div id="tableau">
-                    <script type="text/javascript">
-                    var Nom=<?php echo json_encode($Nom)?>;
-                    var Prenom=<?php echo json_encode($Prenom)?>;
-                    var Medecins='<form action="InfoMedecin.php" method="post"><table><tr><td><h2>Médecins Généralistes:</h2></td></tr>';
-                    for(var i=0; i<Nom.length; i++){
-                        Medecins += '<tr><td><button id="annulation" name="btn_Nom_Medecin" style="width:100%" value="'+Nom[i]+'">'+Nom[i]+" "+Prenom[i]+'</button></td></tr>';
-                    }
-                    Medecins +='</table></form>';
-                    $("#tableau").append(Medecins);
-                    </script>
+                <div id="Recherche">
+                <form action="ResultatRecherche.php" method="post">
+                        <table align="center">
+                            <tr>
+                                <td align="middle"><h2>Rechercher une Spécialité: </h2></td>
+                            </tr>
+                            <tr>
+                                <td align="middle"><input type="text" name="recherche" required></td>
+                            </tr>
+                            <tr>
+                                <td align="middle"><input type="submit" value="Rechercher"></input></td>
+                            </tr>
+                        </table>
+                    </form>
                 </div>
             </div>
 

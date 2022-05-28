@@ -98,18 +98,49 @@
             }
         ?>
 
-        
+        <?php
+            $connexion = $_SESSION["connexion"];
+        ?>
         <div id="wrapper">
             <div id="header">
-                <div id="logo_compte">
-                <a href="Connexion.php"><img src="boutonMonCompte.png" alt="logoCompte" width="150" height="50"></img></a>
+            <div id="boxProfilPatient">
+                <script type="text/javascript">
+                    var connexion = <?php echo json_encode($connexion)?>;
+                        if(connexion==1){
+                            var affichage = '<form action="monComptePatient.php">';
+                            affichage += '<input id = "btnProfilMedecin" type="submit" value = "Mon profil">';
+                            affichage += '</form>';
+                            $("#boxProfilPatient").append(affichage);
+                            
+
+                        }else{
+                            var affichage = '<div id="logo_compte"><a href="seConnecter.php"><img src="boutonMonCompte.png" alt="logoCompte" width="150" height="50"></img></a></div>';
+                            $("#boxProfilPatient").append(affichage);
+                        }
+                </script>
                 </div>
             </div>
             <div id="navigation">
-                <a href="index.php"><img src="boutonAccueil.png"></img></a>
-                <img src="boutonParcourir.png"></img>
-                <a href="Recherche.php"><img src="boutonRecherche.png"></img></a>
-                <a href="Rdv.php"><img src="boutonRdv.png"></img></a>
+            <div class ="btn_navigation">
+                    <form action="index.php" method="post">
+                        <input type="submit" value="Accueil">
+                    </form>
+                </div>
+                <div class ="btn_navigation">
+                    <form action="Parcourir.php" method="post">
+                        <input type="submit" value="Tout Parcourir">
+                    </form>
+                </div>
+                <div class ="btn_navigation">
+                    <form action="Recherche.php" method="post">
+                        <input type="submit" value="Rechercher">
+                    </form>
+                </div>
+                <div class ="btn_navigation">
+                    <form action="Rdv.php" method="post">
+                        <input type="submit" value="Rendez-vous">
+                    </form>
+                </div>
             </div>
 
             <div id="section">
@@ -120,7 +151,7 @@
                     var PrenomAddictologue=<?php echo json_encode($PrenomAddictologue)?>;
                     var Addictologues='<form action="InfoMedecin.php" method="post"><table><tr><td><h2>Addictologues:</h2></td></tr>';
                     for(var i=0; i<NomAddictologue.length; i++){
-                        Addictologues += '<tr><td><button id="btn_Nom_Medecin" name="btn_Nom_Medecin" style="width:100%" value="'+NomAddictologue[i]+'">'+NomAddictologue[i]+' '+PrenomAddictologue[i]+'</button></td></tr>';
+                        Addictologues += '<tr><td><button id="annulation" name="btn_Nom_Medecin" style="width:100%" value="'+NomAddictologue[i]+'">'+NomAddictologue[i]+' '+PrenomAddictologue[i]+'</button></td></tr>';
                     }
                     Addictologues +='</table></form>';
                     $("#tableau_addictologue").append(Addictologues);
@@ -134,7 +165,7 @@
                     var PrenomAndrologue=<?php echo json_encode($PrenomAndrologue)?>;
                     var Andrologues='<form action="InfoMedecin.php" method="post"><table><tr><td><h2>Andrologues:</h2></td></tr>';
                     for(var i=0; i<NomAndrologue.length; i++){
-                        Andrologues += '<tr><td><button id="btn_Nom_Medecin" name="btn_Nom_Medecin" style="width:100%" value="'+NomAndrologue[i]+'">'+NomAndrologue[i]+' '+PrenomAndrologue[i]+'</button></td></tr>';
+                        Andrologues += '<tr><td><button id="annulation" name="btn_Nom_Medecin" style="width:100%" value="'+NomAndrologue[i]+'">'+NomAndrologue[i]+' '+PrenomAndrologue[i]+'</button></td></tr>';
                     }
                     Andrologues +='</table></form>';
                     $("#tableau_andrologue").append(Andrologues);
@@ -148,7 +179,7 @@
                     var PrenomCardiologue=<?php echo json_encode($PrenomCardiologue)?>;
                     var Cardiologues='<form action="InfoMedecin.php" method="post"><table><tr><td><h2>Cardiologues:</h2></td></tr>';
                     for(var i=0; i<NomCardiologue.length; i++){
-                        Cardiologues += '<tr><td><button id="btn_Nom_Medecin" name="btn_Nom_Medecin" style="width:100%" value="'+NomCardiologue[i]+'">'+NomCardiologue[i]+' '+PrenomCardiologue[i]+'</button></td></tr>';
+                        Cardiologues += '<tr><td><button id="annulation" name="btn_Nom_Medecin" style="width:100%" value="'+NomCardiologue[i]+'">'+NomCardiologue[i]+' '+PrenomCardiologue[i]+'</button></td></tr>';
                     }
                     Cardiologues +='</table></form>';
                     $("#tableau_cardiologue").append(Cardiologues);
@@ -162,7 +193,7 @@
                     var PrenomDermatologue=<?php echo json_encode($PrenomDermatologue)?>;
                     var Dermatologues='<form action="InfoMedecin.php" method="post"><table><tr><td><h2>Dermatologues:</h2></td></tr>';
                     for(var i=0; i<NomDermatologue.length; i++){
-                        Dermatologues += '<tr><td><button id="btn_Nom_Medecin" name="btn_Nom_Medecin" style="width:100%" value="'+NomDermatologue[i]+'">'+NomDermatologue[i]+' '+PrenomDermatologue[i]+'</button></td></tr>';
+                        Dermatologues += '<tr><td><button id="annulation" name="btn_Nom_Medecin" style="width:100%" value="'+NomDermatologue[i]+'">'+NomDermatologue[i]+' '+PrenomDermatologue[i]+'</button></td></tr>';
                     }
                     Dermatologues +='</table></form>';
                     $("#tableau_dermatologue").append(Dermatologues);
@@ -176,7 +207,7 @@
                     var PrenomGastroHepatoEnterologue=<?php echo json_encode($PrenomGastroHepatoEnterologue)?>;
                     var GastroHepatoEnterologues='<form action="InfoMedecin.php" method="post"><table><tr><td><h2>GastroHepatoEnterologues:</h2></td></tr>';
                     for(var i=0; i<NomGastroHepatoEnterologue.length; i++){
-                        GastroHepatoEnterologues += '<tr><td><button id="btn_Nom_Medecin" name="btn_Nom_Medecin" style="width:100%" value="'+NomGastroHepatoEnterologue[i]+'">'+NomGastroHepatoEnterologue[i]+' '+PrenomGastroHepatoEnterologue[i]+'</button></td></tr>';
+                        GastroHepatoEnterologues += '<tr><td><button id="annulation" name="btn_Nom_Medecin" style="width:100%" value="'+NomGastroHepatoEnterologue[i]+'">'+NomGastroHepatoEnterologue[i]+' '+PrenomGastroHepatoEnterologue[i]+'</button></td></tr>';
                     }
                     GastroHepatoEnterologues +='</table></form>';
                     $("#tableau_gastroHepatoEnterologue").append(GastroHepatoEnterologues);
@@ -190,7 +221,7 @@
                     var PrenomGynecologue=<?php echo json_encode($PrenomGynecologue)?>;
                     var Gynecologues='<form action="InfoMedecin.php" method="post"><table><tr><td><h2>Gynecologues:</h2></td></tr>';
                     for(var i=0; i<NomGynecologue.length; i++){
-                        Gynecologues += '<tr><td><button id="btn_Nom_Medecin" name="btn_Nom_Medecin" style="width:100%" value="'+NomGynecologue[i]+'">'+NomGynecologue[i]+' '+PrenomGynecologue[i]+'</button></td></tr>';
+                        Gynecologues += '<tr><td><button id="annulation" name="btn_Nom_Medecin" style="width:100%" value="'+NomGynecologue[i]+'">'+NomGynecologue[i]+' '+PrenomGynecologue[i]+'</button></td></tr>';
                     }
                     Gynecologues +='</table></form>';
                     $("#tableau_gynecologue").append(Gynecologues);
@@ -204,7 +235,7 @@
                     var PrenomIST=<?php echo json_encode($PrenomIST)?>;
                     var IST='<form action="InfoMedecin.php" method="post"><table><tr><td><h2>IST:</h2></td></tr>';
                     for(var i=0; i<NomIST.length; i++){
-                        IST += '<tr><td><button id="btn_Nom_Medecin" name="btn_Nom_Medecin" style="width:100%" value="'+NomIST[i]+'">'+NomIST[i]+' '+PrenomIST[i]+'</button></td></tr>';
+                        IST += '<tr><td><button id="annulation" name="btn_Nom_Medecin" style="width:100%" value="'+NomIST[i]+'">'+NomIST[i]+' '+PrenomIST[i]+'</button></td></tr>';
                     }
                     IST +='</table></form>';
                     $("#tableau_IST").append(IST);
@@ -218,7 +249,7 @@
                     var PrenomOsteopathe=<?php echo json_encode($PrenomOsteopathe)?>;
                     var Osteopathes='<form action="InfoMedecin.php" method="post"><table><tr><td><h2>Osteopathe:</h2></td></tr>';
                     for(var i=0; i<NomOsteopathe.length; i++){
-                        Osteopathes += '<tr><td><button id="btn_Nom_Medecin" name="btn_Nom_Medecin" style="width:100%" value="'+NomOsteopathe[i]+'">'+NomOsteopathe[i]+' '+PrenomOsteopathe[i]+'</button></td></tr>';
+                        Osteopathes += '<tr><td><button id="annulation" name="btn_Nom_Medecin" style="width:100%" value="'+NomOsteopathe[i]+'">'+NomOsteopathe[i]+' '+PrenomOsteopathe[i]+'</button></td></tr>';
                     }
                     Osteopathes +='</table></form>';
                     $("#tableau_osteopathe").append(Osteopathes);

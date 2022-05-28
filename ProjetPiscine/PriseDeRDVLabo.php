@@ -153,7 +153,7 @@
                     <table border="1px">
                         <tr>
                             <td COLSPAN="3" ROWSPAN="2" align="middle" class="LibelleInfoPlanning">Spécialité</td>
-                            <td COLSPAN="3" ROWSPAN="2"align="middle" class="LibelleInfoPlanning">Médecin</td>
+                            <td COLSPAN="3" ROWSPAN="2"align="middle" class="LibelleInfoPlanning">Service</td>
                             <td COLSPAN="2" align="middle" class="JourPlanning">Lundi</td>
                             <td COLSPAN="2" align="middle" class="JourPlanning">Mardi</td>
                             <td COLSPAN="2" align="middle" class="JourPlanning">Mercredi</td>
@@ -177,7 +177,7 @@
                         </tr>
                         <tr>
                             <td COLSPAN="3" ROWSPAN="9" align="middle" class="infoMedecinPlanning"><?php echo $Specialite?></td>
-                            <td COLSPAN="3" ROWSPAN="9" align="middle" class="infoMedecinPlanning"><?php echo $Nom." ".$Prenom?></td>
+                            <td COLSPAN="3" ROWSPAN="9" align="middle" class="infoMedecinPlanning"><?php echo $Nom?></td>
                             <td><button id="btn0" style="width:100%" value="8h00" onclick="RDVLundi(this.value)"><script type="text/javascript">Dispo();</script>8h00</button></td>
                             <td><button id="btn9" style="width:100%" value="14h00" onclick="RDVLundi(this.value)"> <script type="text/javascript">Dispo();</script>14h00</button></td>
                             <td><button id="btn18" style="width:100%" value="8h00" onclick="RDVMardi(this.value)"><script type="text/javascript">Dispo();</script>8h00</button></td>

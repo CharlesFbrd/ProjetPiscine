@@ -7,7 +7,7 @@ session_start();
 
 // Connexion à la bdd 
 $database = "projetpiscine";
-$db_handle = mysqli_connect('localhost', 'root', 'root'); 
+$db_handle = mysqli_connect('localhost:3308', 'root', 'root'); 
 $db_found = mysqli_select_db($db_handle, $database);
 
 // Déclaration du username et mdp pour la connexion récupéré dans le formulaire
@@ -25,20 +25,22 @@ if ($db_found){
       if ($data["Mdp"]== $mdp){
          $_SESSION["connexion"] = 1; 
       } else {
-         $_SESSION["connexion"] = 0; 
+         $_SESSION["connexion"] = 0;
       }
    }; 
    
 
    if($_SESSION["connexion"]== 0){
-      $_SESSION["erreurConnexionPatient"] = "Identifiant ou mot de passe incorrect"; 
+      $_SESSION["erreurConnexionPatient"] = "Identifiant ou mot de passe incorrect";
+      $_SESSION["NomPatient"] = ""; 
+      $_SESSION["PrenomPatient"] = ""; 
       header('Location: connexionPatient.php');
 
    }
    else if($_SESSION["connexion"]== 1){
     $_SESSION["erreurConnexionPatient"] = ""; 
-    $_SESSION["NomMedecin"] = $nom; 
-    $_SESSION["PrenomMedecin"] = $prenom; 
+    $_SESSION["NomPatient"] = $nom; 
+    $_SESSION["PrenomPatient"] = $prenom; 
     header('Location: index.php'); 
  }
    

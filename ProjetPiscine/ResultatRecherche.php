@@ -4,35 +4,41 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Choix Médecin</title>
+        <title>Résultat Recherche</title>
         <meta charset="utf-8">
         <link href="style.css" rel="stylesheet" type="text/css" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     </head>
     <body>
+        <?php
+            $Specialite = $_POST["recherche"];
+            $NomMedecin = array();
+            $PrenomMedecin = array();
+            $Bureau = array();
+            $Telephone = array();
+            $Email = array();
 
-        <?php 
-            $Nom = array();
-            $Prenom = array();
             $db = "projetpiscine";
             $site = "localhost:3308";
             $db_id="root";
             $db_mdp="root";
-        
             $db_handle = mysqli_connect($site, $db_id, $db_mdp);
             $db_found = mysqli_select_db($db_handle, $db);
+            
             if($db_found){
-                $sql = "SELECT Nom,Prenom FROM medecin WHERE Specialite='Generaliste'";
+                $sql = "SELECT Nom,Prenom,Bureau,Telephone,Email FROM medecin WHERE Specialite LIKE '$Specialite'";
                 $res = mysqli_query($db_handle,$sql);
                 while($data = mysqli_fetch_assoc($res)){
-                    $Nom[]=$data["Nom"];
-                    $Prenom[]=$data["Prenom"];
+                    $NomMedecin[]=$data["Nom"];
+                    $PrenomMedecin[]=$data["Prenom"];
+                    $Bureau[]=$data["Bureau"];
+                    $Telephone[]=$data["Telephone"];
+                    $Email[]=$data["Email"];
                 };
             }else{
                 echo "Unable to connect <br>";
             }
         ?>
-
         <?php
             $connexion = $_SESSION["connexion"];
         ?>
@@ -79,17 +85,27 @@
             </div>
 
             <div id="section">
-                <div id="tableau">
-                    <script type="text/javascript">
-                    var Nom=<?php echo json_encode($Nom)?>;
-                    var Prenom=<?php echo json_encode($Prenom)?>;
-                    var Medecins='<form action="InfoMedecin.php" method="post"><table><tr><td><h2>Médecins Généralistes:</h2></td></tr>';
-                    for(var i=0; i<Nom.length; i++){
-                        Medecins += '<tr><td><button id="annulation" name="btn_Nom_Medecin" style="width:100%" value="'+Nom[i]+'">'+Nom[i]+" "+Prenom[i]+'</button></td></tr>';
-                    }
-                    Medecins +='</table></form>';
-                    $("#tableau").append(Medecins);
-                    </script>
+                <div id="AffichageRecherche">
+                <script type="text/javascript">
+                            var NomMedecin = <?php echo json_encode($NomMedecin)?>;
+                            var PrenomMedecin = <?php echo json_encode($PrenomMedecin)?>;
+                            var Specialite = <?php echo json_encode($Specialite)?>;
+                            var Bureau = <?php echo json_encode($Bureau)?>;
+                            var Telephone = <?php echo json_encode($Telephone)?>;
+                            var Email = <?php echo json_encode($Email)?>;
+                            var affichage = '<form action="InfoMedecin.php" method="post">';
+                            var j=0;
+                            for(var i=0; i<NomMedecin.length; i++){
+                                j = i +1;
+                                affichage += '<table><tr><td COLSPAN="2"><h2>RDV Médecin: </h2></td></tr>';
+                                affichage += '<tr><td id="libelle">Nom: </td><td>'+NomMedecin[i]+'</td><td id="libelle">Prenom: </td><td>'+PrenomMedecin[i]+'</td></tr>';
+                                affichage += '<tr><td id="libelle">Specialite: </td><td>'+Specialite+'</td><td id="libelle">Bureau: </td><td>'+Bureau[i]+'</td></tr>';
+                                affichage += '<tr><td id="libelle">Telephone: </td><td>+33 '+Telephone[i]+'</td><td id="libelle">Email: </td><td>'+Email[i]+'</td></tr>';
+                                affichage += '<tr><td></td><td></td><td COLSPAN="2"><button value="'+NomMedecin[i]+'" name="btn_Nom_Medecin" id="annulation">Info Médecin</button></td></tr></table>';
+                            }
+                            affichage += '</form>';
+                            $("#AffichageRecherche").append(affichage);
+                    </script>  
                 </div>
             </div>
 

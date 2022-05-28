@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Info Médecin</title>
+        <title>Info Labo</title>
         <meta charset="utf-8">
         <link href="style.css" rel="stylesheet" type="text/css" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -12,8 +12,8 @@
     <body>
 
         <?php 
-            $Nom = $_POST["btn_Nom_Medecin"];
-            $_SESSION["NomMedecin"] = $Nom;
+            $_SESSION["NomMedecin"] = "LABORATOIRE";
+            $Nom = $_SESSION["NomMedecin"];
             $planning = array();
             $db = "projetpiscine";
             $site = "localhost:3308";
@@ -106,8 +106,8 @@
                     var Bureau=<?php echo json_encode($Bureau)?>;
                     var Telephone=<?php echo json_encode($Telephone)?>;
                     var Email=<?php echo json_encode($Email)?>;
-                    var InfosMedecin='<h2>Dr.'+Prenom+' '+Nom+'</h2>';
-                    InfosMedecin+='<h3>Médecin: '+Specialite+'</h3>';
+                    var InfosMedecin='<h2>'+Nom+'</h2>';
+                    InfosMedecin+='<h3>'+Specialite+'</h3>';
                     InfosMedecin+='<h3>Bureau: '+Bureau+'</h3>';
                     InfosMedecin+='<h3>Téléphone: +33 '+Telephone+'</h3>';
                     InfosMedecin+='<h3>Email: '+Email+'</h3>';
@@ -169,14 +169,11 @@
                         </tr>
                     </table>
                 </div>
-                <div id="priseDeRdv">
-                    <a href="PriseDeRDV.php"><img src="btn_Rdv.png" alt="boutonRDV" width="200" height="70"></a>
+                <div id="priseDeRdvLabo">
+                    <a href="PriseDeRDVLabo.php"><img src="btn_Rdv2.png" alt="boutonRDV" width="200" height="70"></a>
                 </div>
-                <div id="CommuniquerAvecMedecin">
-                    <a href="Chatroom.php"><img src="btn_CommuniquerMedecin.png" alt="boutonComm" width="200" height="70"></a>
-                </div>
-                <div id="VoirCV">
-                    <a href="CV.php"><img src="btn_VoirCV.png" alt="boutonCV" width="200" height="70"></a>
+                <div id="NosServices">
+                    <a href="ServicesLabo.php"><img src="boutonNosServices.png" alt="boutonComm" width="200" height="70"></a>
                 </div>
             </div>
 

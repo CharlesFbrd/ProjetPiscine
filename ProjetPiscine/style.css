@@ -22,8 +22,24 @@ h2{
 }
 #logo_compte{
     float: right;
-    margin-top : 20px;
+    margin-right : 15px;
+}
+#boxProfilPatient{
+    float : right;
+    width:130px;
+    margin-top: 25px;
     margin-right : 2%;
+    background-color: #11ffee00;
+}
+
+#btnProfilPatient{
+    float: right;
+    width: 100%;
+    background-color: #11ffee00;
+    border: none;
+    cursor: pointer; 
+    font-size: 15px;
+    font-family: Georgia;
 }
 
 /* /////////////////////////////////////// */
@@ -31,6 +47,11 @@ h2{
     float : left;
     width : 20%;
     text-align: center;
+}
+
+.btn_navigation{
+    margin-top: 50px;
+    margin-bottom: 25px;
 }
 
 /* ////////////////////////////////////// */
@@ -119,11 +140,11 @@ h2{
     float: left;
     width: 55%;
     margin-left: 15px;
-    margin-top: 25px;  
+    margin-top: 25px;
 }
 #planning_medecin{
     float: left;
-    margin-left: 80px;
+    width: 80%;
     margin-top: 30px;
 }
 #priseDeRdv{
@@ -144,45 +165,96 @@ h2{
     margin-top: 20px;
     margin-bottom: 30px;
 }
+#priseDeRdvLabo{
+    float: left;
+    margin-left: 200px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+#NosServices{
+    float: left;
+    margin-left: 50px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
 
+#service_depistage{
+    float: left;
+    margin-left: 20px;
+    margin-top: 20px;   
+}
+#service_biologie_preventive{
+    float: left;
+    margin-left: 20px;
+    margin-top: 20px;   
+}
+#service_biologie_femme{
+    float: left;
+    margin-left: 20px;
+    margin-top: 20px;   
+}
+#service_biologie_routine{
+    float: left;
+    margin-left: 20px;
+    margin-top: 20px;   
+}
+#service_cancerologie{
+    float: left;
+    margin-left: 20px;
+    margin-top: 20px;   
+}
+#service_gynecologie{
+    float: left;
+    margin-left: 20px;
+    margin-top: 20px;   
+}
+#priseDeRdvLabo2{
+    float: left;
+    margin-left: 400px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
 
 
 #tableau_addictologue{
     float: left;
     width:  15%;
-    margin-left: 160px;
+    height : 210px;
     margin-top: 25px;
 }
 #tableau_andrologue{
     float: left;
     width:  15%;
+    height : 200px;
     margin-top: 25px;
     margin-left: 25px;
 }
 #tableau_cardiologue{
     float: left;
     width:  15%;
+    height : 200px;
     margin-top: 25px;
     margin-left: 25px;
 }
 #tableau_dermatologue{
     float: left;
     width:  15%;
+    height : 200px;
     margin-top: 25px;
     margin-left: 25px;
 }
 #tableau_gastroHepatoEnterologue{
     float: left;
     width:  27%;
+    height : 200px;
     margin-top: 25px;
-    margin-left: 25px;
     margin-bottom: 25px;
+    margin-left: 25px;
 }
 #tableau_gynecologue{
     float: left;
     width:  15%;
     margin-top: 25px;
-    margin-left: 25px;
     margin-bottom: 25px;
 }
 #tableau_IST{
@@ -204,8 +276,53 @@ h2{
     float: left;
     width: 80%;
     margin-top: 25px;
-    margin-left: 50px;
+    margin-left: 100px;
     margin-bottom: 25px;
+}
+#InfoRDV{
+    float: left;
+    width: 80%;
+    margin-top: 10px;
+    margin-left: 500px;
+    margin-bottom: 25px;
+}
+
+input[type=submit] {
+    background-color: #0c88c6;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    cursor: pointer; /* souris change qd sur bouton */
+    width: 80%;
+    font-size: 14px;
+    border-radius: 10px;
+}
+
+input[type=submit]:hover { /* couleur quand souris sur le bouton */ 
+    background-color: white;
+    color: #2d80e1;
+    border: 1px solid #2d80e1;
+    font-size: 12px;
+}
+#annulation{
+    background-color: #0c88c6;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    cursor: pointer; /* souris change qd sur bouton */
+    width: 80%;
+    font-size: 14px;
+    border-radius: 10px;
+}
+#annulation :hover{
+    background-color: white;
+    color: #2d80e1;
+    border: 1px solid #2d80e1;
+    font-size: 12px;
+}
+.JHRdv{
+    color: #2d80e1;
+    font-size: 120%;
 }
 
 .infoMedecinPlanning{
@@ -218,7 +335,24 @@ h2{
     background-color: rgb(176,242,182); 
 }
 
+#Paiement{
+    float: left;
+    width: 95%;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
 
+#ConfirmationPaiement{
+    float: left;
+    width: 95%;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+#libelle{
+    font-size: 120%;
+    font-weight: bold;
+}
 
 /* /////////////////////////// */
 #footer{
