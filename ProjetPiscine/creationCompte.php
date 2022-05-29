@@ -18,7 +18,7 @@ $mdpc = isset($_POST["mdpC"])? $_POST["mdpC"] : "";
 
 // Connexion à la bdd 
 $database = "projetpiscine";
-$db_handle = mysqli_connect('localhost', 'root', 'root'); 
+$db_handle = mysqli_connect('localhost:3308', 'root', 'root'); 
 $db_found = mysqli_select_db($db_handle, $database);
 if($mdp != $mdpc){
     $_SESSION["erreurCreationCompte"] = "Les mots de passe ne sont pas identiques"; 

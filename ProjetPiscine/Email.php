@@ -24,7 +24,7 @@
             $CodeCarte = $_POST["CodeCarte"];
 
             $db = "projetpiscine";
-            $site = "localhost";
+            $site = "localhost:3308";
             $db_id="root";
             $db_mdp="root";
         
