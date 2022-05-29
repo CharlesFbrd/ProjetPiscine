@@ -26,16 +26,13 @@ if($mdp != $mdpc){
 } 
 else {
     $_SESSION["erreurCreationCompte"] = ""; 
-}
+    if($db_found){
 
-
-if($db_found){
-
-    $sql = "INSERT INTO patient (Nom, Prénom, Adresse1, ComplementAdresse, Ville, CodePostal, Pays, NumeroTelephone, Email, CarteVitale, Mdp)VALUES ('$nom', '$prenom', '$adresse1', '$adresse2', '$ville', '$codePostal', '$pays', '$telephone', '$email', '$nCarteVitale', '$mdp')"; 
-    $result = mysqli_query($db_handle, $sql); // recherche de la requête dans la bdd 
-
-    header('Location: index.php'); 
-
+        $sql = "INSERT INTO patient (Nom, Prénom, Adresse1, ComplementAdresse, Ville, CodePostal, Pays, NumeroTelephone, Email, CarteVitale, Mdp)VALUES ('$nom', '$prenom', '$adresse1', '$adresse2', '$ville', '$codePostal', '$pays', '$telephone', '$email', '$nCarteVitale', '$mdp')"; 
+        $result = mysqli_query($db_handle, $sql); // recherche de la requête dans la bdd 
+    
+        header('Location: index.php'); 
+    }
 }
 
 
