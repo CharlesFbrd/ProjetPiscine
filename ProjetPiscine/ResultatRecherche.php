@@ -19,7 +19,7 @@
             $Email = array();
 
             $db = "projetpiscine";
-            $site = "localhost";
+            $site = "localhost:3308";
             $db_id="root";
             $db_mdp="root";
             $db_handle = mysqli_connect($site, $db_id, $db_mdp);

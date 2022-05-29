@@ -1,0 +1,32 @@
+<!ELEMENT CVs(CV*)>
+<!ELEMENT CV(etatCivil,diplomes+,experiences+)>
+<!ATTLIST CV id CDATA "0">
+<!ELEMENT etatCivil(nom,prenom,adresse,dateDeNaissance,email+)>
+<!ATTLIST etatCivil nom CDATA "inconnu"
+                    prenom CDATA "inconnu"
+                    adresse CDATA "inconnu"
+                    dateDeNaissance CDATA "inconnu"
+                    email CDATA "inconnu">
+<!ELEMENT diplomes(libelle,annee,institution)>
+<!ATTLIST diplomes libelle CDATA "inconnu"
+                   annee CDATA "inconnu"
+                   institution CDATA "inconnu">
+<!ELEMENT experiences(debut,fin,entreprise,poste,mission)>
+<!ATTLIST experiences debut CDATA "inconnu"
+                      fin CDATA "inconnu"
+                      entreprise CDATA "inconnu"
+                      poste CDATA "inconnu"
+                      mission CDATA "inconnu">
+<!ELEMENT nom(#PCDATA)>
+<!ELEMENT prenom(#PCDATA)>
+<!ELEMENT adresse(#PCDATA)>
+<!ELEMENT dateDeNaissance(#PCDATA)>
+<!ELEMENT email(#PCDATA)>
+<!ELEMENT libelle(#PCDATA)>
+<!ELEMENT annee(#PCDATA)>
+<!ELEMENT institution(#PCDATA)>
+<!ELEMENT debut(#PCDATA)>
+<!ELEMENT fin(#PCDATA)>
+<!ELEMENT entreprise(#PCDATA)>
+<!ELEMENT poste(#PCDATA)>
+<!ELEMENT mission(#PCDATA)>
