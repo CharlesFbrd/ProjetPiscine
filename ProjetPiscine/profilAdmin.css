@@ -20,7 +20,7 @@ h2{
     background-image: url("headerOmnesSante.png");
     float : left;
     width : 100%;
-    height : 347px;
+    height : 250px;
 }
 
 #boxProfilAdmin{
@@ -254,12 +254,20 @@ input[type=submit]:hover { /* couleur quand souris sur le bouton */
     background-color : #2d80e1;
     color : white;
     width : 100%;
-    height : 280px;
+    height : 250px;
     font-size : 80%;
-    text-align : center;
+    font-family: Georgia;
 }
 #img_map{ 
     float : right; 
     margin-top: 10px; 
-    margin-right: 50px; 
+    margin-right: 100px; 
+}
+
+#infos{
+
+    float:left;
+    background-color : #2d80e1;
+    margin-left: 100px; 
+    margin-left: 50px; 
 }

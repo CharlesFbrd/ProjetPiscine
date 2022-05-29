@@ -176,7 +176,7 @@
                     <a href="Chatroom.php"><img src="btn_CommuniquerMedecin.png" alt="boutonComm" width="200" height="70"></a>
                 </div>
                 <div id="VoirCV">
-                    <a href="CV.php"><img src="btn_VoirCV.png" alt="boutonCV" width="200" height="70"></a>
+                    <a href="voirCV.php"><img src="btn_VoirCV.png" alt="boutonCV" width="200" height="70"></a>
                 </div>
             </div>
 
