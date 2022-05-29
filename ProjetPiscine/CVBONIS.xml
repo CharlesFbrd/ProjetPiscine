@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CV>
+        <etatCivil>
+            <nom>BONIS</nom>
+            <prenom>Gregoire</prenom>
+            <adresse>8 rue de Montmirail</adresse>
+            <dateDeNaissance>30/05/2001</dateDeNaissance>
+            <email>gregoire.bonis@omnessante.fr</email>
+        </etatCivil>
+        <diplomes>
+            <libelle>BAC</libelle>
+            <annee>2015</annee>
+            <institution>lycee</institution>
+        </diplomes>
+        <diplomes>
+            <libelle>Diplome de Medecine</libelle>
+            <annee>2020</annee>
+            <institution>Faculte</institution>
+        </diplomes>
+        <experiences>
+            <debut>14/02/2017</debut>
+            <fin>13/04/2020</fin>
+            <entreprise>Cabinet Medical Bordeaux</entreprise>
+            <poste>Generaliste</poste>
+            <mission>Interne en temps que medecin generaliste</mission>
+        </experiences>
+        <experiences>
+            <debut>20/05/2020</debut>
+            <fin>29/08/2020</fin>
+            <entreprise>Cabinet Medical Nantes</entreprise>
+            <poste>Generaliste</poste>
+            <mission>Proffessionnel de Sante</mission>
+        </experiences>
+</CV>

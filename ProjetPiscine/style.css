@@ -187,7 +187,11 @@ h2{
     margin-top: 20px;
     margin-bottom: 30px;
 }
-
+#CVmedecin{
+    float: left;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
 #service_depistage{
     float: left;
     margin-left: 20px;

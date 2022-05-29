@@ -1,35 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-    <CV>
+<CV>
         <etatCivil>
-            <nom>BERTRAND</nom>
-            <prenom>Antoine</prenom>
+            <nom>GAYE</nom>
+            <prenom>Coumba</prenom>
             <adresse>8 rue de Montmirail</adresse>
-            <dateDeNaissance>18/12/2001</dateDeNaissance>
-            <email>antoine.bertrand@omnessante.fr</email>
+            <dateDeNaissance>06/10/2001</dateDeNaissance>
+            <email>coumba.gaye@omnessante.fr</email>
         </etatCivil>
         <diplomes>
             <libelle>BAC</libelle>
-            <annee>2015<annee>
+            <annee>2015</annee>
             <institution>lycee</institution>
         </diplomes>
         <diplomes>
             <libelle>Diplome de Medecine</libelle>
-            <annee>2020<annee>
+            <annee>2020</annee>
             <institution>Faculte</institution>
         </diplomes>
         <experiences>
             <debut>14/02/2017</debut>
             <fin>13/04/2020</fin>
-            <entreprise>CHU Bordeaux</entreprise>
-            <poste>Addictologue</poste>
-            <mission>Interne en temps qu'addictologue</mission>
+            <entreprise>Cabinet Medical Bordeaux</entreprise>
+            <poste>Dermatologue</poste>
+            <mission>Interne en temps que dermatologue</mission>
         </experiences>
         <experiences>
             <debut>20/05/2020</debut>
             <fin>26/08/2020</fin>
-            <entreprise>Hopital de Nantes</entreprise>
-            <poste>Addictologue</poste>
+            <entreprise>Cabinet Medical Nantes</entreprise>
+            <poste>Dermatologue</poste>
             <mission>Proffessionnel de Sante</mission>
         </experiences>
-    </CV>
+</CV>

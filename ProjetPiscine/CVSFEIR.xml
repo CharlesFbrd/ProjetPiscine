@@ -1,35 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-    <CV id="CV1">
+<CV>
         <etatCivil>
-            <nom>BERTRAND</nom>
-            <prenom>Antoine</prenom>
+            <nom>SFEIR</nom>
+            <prenom>Roy</prenom>
             <adresse>8 rue de Montmirail</adresse>
-            <dateDeNaissance>18/12/2001</dateDeNaissance>
-            <email>antoine.bertrand@omnessante.fr</email>
+            <dateDeNaissance>12/07/2001</dateDeNaissance>
+            <email>roy.sfeir@omnessante.fr</email>
         </etatCivil>
         <diplomes>
             <libelle>BAC</libelle>
-            <annee>2015<annee>
+            <annee>2015</annee>
             <institution>lycee</institution>
         </diplomes>
         <diplomes>
             <libelle>Diplome de Medecine</libelle>
-            <annee>2020<annee>
+            <annee>2020</annee>
             <institution>Faculte</institution>
         </diplomes>
         <experiences>
             <debut>14/02/2017</debut>
             <fin>13/04/2020</fin>
-            <entreprise>CHU Bordeaux</entreprise>
-            <poste>Addictologue</poste>
-            <mission>Interne en temps qu'addictologue</mission>
+            <entreprise>Cabinet Medical Bordeaux</entreprise>
+            <poste>Generaliste</poste>
+            <mission>Interne en temps que medecin generaliste</mission>
         </experiences>
         <experiences>
             <debut>20/05/2020</debut>
-            <fin>26/08/2020</fin>
-            <entreprise>Hopital de Nantes</entreprise>
-            <poste>Addictologue</poste>
+            <fin>29/08/2020</fin>
+            <entreprise>Cabinet Medical Nantes</entreprise>
+            <poste>Generaliste</poste>
             <mission>Proffessionnel de Sante</mission>
         </experiences>
-    </CV>
+</CV>
