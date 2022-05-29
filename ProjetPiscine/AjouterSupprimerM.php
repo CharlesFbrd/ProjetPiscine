@@ -16,6 +16,16 @@
 
 <div id = wrapper>
 
+    <div id = header>
+        <img src="logoOmnesSante.png" alt="logoOmnesSante" width="200" height="80"></img>
+        <div id="boxRetour" >
+            <form id = "formRetour" action="profilAdmin.php">
+                    <input id="btnRetour" type="submit" value="Retour">
+            </form>
+        </div>
+        
+    </div>
+
     <div id="boxProfils">
 
         <form action="ajouterMedecin.php">

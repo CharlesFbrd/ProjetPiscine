@@ -7,7 +7,7 @@ session_start();
 
 // Connexion à la bdd elle est ok
 $database = "projetpiscine";
-$db_handle = mysqli_connect('localhost:3308', 'root', 'root'); 
+$db_handle = mysqli_connect('localhost', 'root', 'root'); 
 $db_found = mysqli_select_db($db_handle, $database);
 
 // Déclaration du username et mdp pour la connexion récupéré dans le formulaire

@@ -29,7 +29,7 @@
             $NomOsteopathe = array();
             $PrenomOsteopathe = array();
             $db = "projetpiscine";
-            $site = "localhost:3308";
+            $site = "localhost";
             $db_id="root";
             $db_mdp="root";
         

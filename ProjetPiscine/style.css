@@ -24,10 +24,12 @@ h2{
     float: right;
     margin-right : 15px;
 }
+
 #formMonProfil{
     width:100%;
     margin: 0 auto; 
     background-color: #11ffee00; /* transparent */
+    border : none; 
     font-family: 'Georgia';
     text-align: center;
 }
@@ -44,6 +46,7 @@ h2{
     width: 100%;
     background-color: #11ffee00;
     border: none;
+    color : white; 
     cursor: pointer; 
     font-size: 15px;
     font-family: Georgia;

@@ -25,7 +25,7 @@
             $TelephoneMedecin = array();
             $EmailMedecin = array();
             $db = "projetpiscine";
-            $site = "localhost:3308";
+            $site = "localhost";
             $db_id="root";
             $db_mdp="root";
         
@@ -67,7 +67,7 @@
                     var connexion = <?php echo json_encode($connexion)?>;
                         if(connexion==1){
                             var affichage = '<form action="monComptePatient.php">';
-                            affichage += '<input id = "btnProfilMedecin" type="submit" value = "Mon profil">';
+                            affichage += '<input id = "btnProfilPatient" type="submit" value = "Mon profil">';
                             affichage += '</form>';
                             $("#boxProfilPatient").append(affichage);
                             
@@ -87,7 +87,7 @@
                 </div>
                 <div class ="btn_navigation">
                     <form action="Parcourir.php" method="post">
-                        <input type="submit" value="Tout Parcourir">
+                        <input type="submit" value="Tout parcourir">
                     </form>
                 </div>
                 <div class ="btn_navigation">

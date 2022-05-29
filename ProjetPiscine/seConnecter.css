@@ -22,17 +22,39 @@ h2{
 
 
 #header{
-    background-image: url("headerConnexionOmnesSante.png");
     float : left;
     width : 100%;
     height : 20%;
 }
 
-#logo_compte{
-    float: right;
-    margin-top : 20px;
-    margin-right : 2%;
+#boxRetour{
+    float : right;
+    width:120px;
+    margin-top: 5px;
+    margin-right : 50px;
+    background-color: #11ffee00; /* fond transparent */
 }
+
+
+#btnRetour{
+    float: right;
+    background-color: #11ffee00;
+    color: #0c88c6; 
+    border: none;
+    cursor: pointer; /* souris change qd sur bouton */
+    font-size: 15px;
+    font-family: Georgia;
+}
+
+#formRetour{
+    width:100%;
+    margin: 0 auto; 
+    background-color: #11ffee00; /* transparent */
+    font-family: 'Georgia';
+    text-align: center;
+}
+
+
 
 #boxProfils{
     width:400px;
@@ -71,3 +93,4 @@ input[type=submit]:hover { /* couleur quand souris sur le bouton */
     font-size: 14px;
     border-radius: 10px;
 }
+

@@ -16,7 +16,13 @@
 
 <div id = wrapper> 
     <div id = header>
-        <a href="seConnecter.php"><img src="boutonMonCompte.png" alt="logoCompte" width="150" height="50"></img></a>
+        <img src="logoOmnesSante.png" alt="logoOmnesSante" width="200" height="80"></img>
+        <div id="boxRetour" >
+            <form id = "formRetour" action="index.php">
+                    <input id="btnRetour" type="submit" value="Retour">
+            </form>
+        </div>
+        
     </div>
 
     <div id="boxProfils">
